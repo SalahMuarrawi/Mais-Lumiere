@@ -1,0 +1,23 @@
+# Temporary analysis files
+.tmp-*
+
+# Node / frontend dependencies
+node_modules/
+
+# Build output
+.next/
+dist/
+build/
+out/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
