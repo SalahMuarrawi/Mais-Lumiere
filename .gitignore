@@ -6,6 +6,7 @@
 *.txt
 .*.txt
 .tmp-*
+*.html
 
 # dependencies
 /node_modules

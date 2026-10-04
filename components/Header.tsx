@@ -7,8 +7,8 @@ import { SITE } from "@/lib/data";
 
 const NAV_LINKS = [
   { href: "/behandlungen", label: "Behandlungen" },
-  { href: "#studio", label: "Studio" },
-  { href: "#galerie", label: "Galerie" },
+  { href: "/#studio", label: "Studio" },
+  { href: "/#galerie", label: "Galerie" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-20 sm:px-8">
-        <Link href="#top" className="group flex items-baseline gap-2">
+        <Link href="/" className="group flex items-baseline gap-2">
           <span className="font-serif text-lg tracking-wide text-white sm:text-xl">
             Mais Lumière
           </span>
