@@ -4,23 +4,22 @@ export const SITE = {
   city: "Graz",
   address: {
     street: "Stubenberggasse 8/1",
-    zip: "8020",
+    zip: "8010",
     city: "Graz",
     country: "Österreich",
   },
-  phone: "+43 660 57 11 721",
-  phoneHref: "tel:+436605711721",
-  email: "maislumiere.esthetic@gmail.com",
+  phone: "+43 664 5732892",
+  phoneHref: "tel:+436645732892",
+  email: "maislumiere@gmail.com",
+  /** Treatwell-Buchungslink – gilt für ALLE Buchungs-Buttons */
   bookingUrl:
-    "https://www.treatwell.at/more/more-mais-lumiere-esthetic-421918?locale=de_DE",
-  instagram: "https://www.instagram.com/more_maislumiere",
+    "https://buchung.treatwell.at/ort/mais-lumiere-esthetic-e-u/?utm_source=widget&utm_medium=partners&utm_campaign=website_sharing",
+  instagramName: "@mais_lumiere_esthetic",
+  instagram:
+    "https://www.instagram.com/mais_lumiere_esthetic?utm_source=qr",
   mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Stubenberggasse%208%2F1%20Graz",
-  hours: [
-    { days: "Montag – Freitag", time: "10:00 – 18:00" },
-    { days: "Samstag", time: "nach Vereinbarung" },
-    { days: "Sonntag", time: "geschlossen" },
-  ],
+    "https://www.google.com/maps/search/?api=1&query=Stubenberggasse%208%2F1%2C%208010%20Graz",
+  hours: "Ausschließlich nach Terminvereinbarung",
   imprint: {
     operator: "Mais Lumière Esthetic (Einzelunternehmen)",
     owner: "Mais Lumière Esthetic",
@@ -36,143 +35,94 @@ export const SITE = {
   },
 };
 
-export type Treatment = {
+export type TreatmentCategory =
+  | "facial-body"
+  | "apparative"
+  | "lashes"
+  | "brows-lifting";
+
+/** Standard-Platzhalterbild für alle Behandlungs-Karten */
+const PLACEHOLDER_IMAGE = "/images/placeholder-treatment.jpg";
+
+export interface Treatment {
+  id: string;
   name: string;
   price: string;
-  duration?: string;
-  desc: string;
+  category: TreatmentCategory;
+  image: string;
+}
+
+export const TREATMENT_CATEGORIES: Record<TreatmentCategory, string> = {
+  "facial-body": "Gesicht & Körper",
+  apparative: "Apparative Anwendungen",
+  lashes: "Wimpern & Lashes",
+  "brows-lifting": "Brows & Lifting",
 };
 
-export type TreatmentGroup = {
-  id: string;
-  title: string;
-  intro: string;
-  items: Treatment[];
-};
+export const TREATMENT_CATEGORY_ORDER: TreatmentCategory[] = [
+  "facial-body",
+  "apparative",
+  "lashes",
+  "brows-lifting",
+];
 
-export const TREATMENTS: TreatmentGroup[] = [
-  {
-    id: "oxygeneo",
-    title: "OxyGeneo – Die Wunderbehandlung",
-    intro:
-      "Der 3-in-1-Instant-Lift mit Fruchtsäure- und LED-Therapie: Reinigen, Sauerstoff-Glow und Straffung in nur 30 Minuten.",
-    items: [
-      {
-        name: "OxyGeneo – Instant Lifting",
-        price: "ab €75",
-        duration: "30 Min.",
-        desc: "Reinigung + Sauerstoff-Peeling + LED-Gesichtslifting – der Sofort-Glow.",
-      },
-    ],
-  },
-  {
-    id: "gesichtspflege",
-    title: "Gesichtspflege & Gesichtsbehandlungen",
-    intro:
-      "Individuelle Pflege für jeden Hauttyp – von der sanften Reinigung bis zum Anti-Aging-Programm mit Massage.",
-    items: [
-      {
-        name: "Basic Gesichtsbehandlung",
-        price: "€70 – €90",
-        duration: "60 Min.",
-        desc: "Reinigung, Peeling, Maske & Feuchtigkeitspflege – ideal für die Wocheneinkehr.",
-      },
-      {
-        name: "Intensive Gesichtsbehandlung",
-        price: "€95 – €115",
-        duration: "75 Min.",
-        desc: "Tiefe Pflege mit Serum, Ampulle und Massage gegen Fältchen und Anspannung.",
-      },
-      {
-        name: "Anti-Aging Gesichtspflege",
-        price: "€110 – €130",
-        duration: "90 Min.",
-        desc: "Liftende Massage, Kollagen-Booster & Lymphdrainage für frische, straffe Haut.",
-      },
-      {
-        name: "Beruhigungspaket",
-        price: "€75",
-        duration: "45 Min.",
-        desc: "Sanfte Pflege für empfindliche Haut – mit beruhigender Massage.",
-      },
-    ],
-  },
-  {
-    id: "spezial",
-    title: "Spezialbehandlungen",
-    intro:
-      "Zielgerichtete Anwendungen mit sichtbarem Ergebnis – vom Aqua-Peeling bis zur Microneedling-Kur.",
-    items: [
-      {
-        name: "Aquafacial",
-        price: "€105",
-        duration: "60 Min.",
-        desc: "Doppeltes Peeling mit Hyaluron-Booster für sofort glattere, strahlendere Haut.",
-      },
-      {
-        name: "Microneedling",
-        price: "€130",
-        duration: "75 Min.",
-        desc: "Kollagen-Boost für feine Linien, Poren und Narben – sichtbare Hauterneuerung.",
-      },
-      {
-        name: "BB Glow – Make-up Effekt",
-        price: "€120",
-        duration: "75 Min.",
-        desc: "Langanhaltender Teint mit sofortigem Glow – wie ein perfekter Make-up-Look, nur natürlicher.",
-      },
-      {
-        name: "Kopfhaut-Behandlung",
-        price: "€45",
-        duration: "30 Min.",
-        desc: "Beruhigende Pflege für Kopfhaut und Haaransatz – für ein frisches, gepflegtes Finish.",
-      },
-      {
-        name: "Glow-Facial / Sofort-Glow",
-        price: "€85",
-        duration: "45 Min.",
-        desc: "Schnelle Intensivpflege mit Glow-Finish – perfekt vor besonderen Anlässen.",
-      },
-    ],
-  },
-  {
-    id: "wimpern",
-    title: "Wimpern & Augenbrauen",
-    intro:
-      "Gepflegte Blicke mit modernen, natürlichen Techniken – von der Verlängerung bis zur Brauencoaching-Feinzeichnung.",
-    items: [
-      {
-        name: "Wimpernverlängerung",
-        price: "€85 – €110",
-        duration: "90 Min.",
-        desc: "Voluminöse oder natürliche Wimpern – individuell an Ihren Wimpernkranz angepasst.",
-      },
-      {
-        name: "Wimpernlift & Tinting",
-        price: "€65",
-        duration: "60 Min.",
-        desc: "Natürliche Wimpern, sichtbar gestylt und abgetönt – ohne Extensions.",
-      },
-      {
-        name: "Brow Lamination",
-        price: "€55",
-        duration: "45 Min.",
-        desc: "Gepflegte, strukturierte Augenbrauen mit modernem Lamination-Verfahren.",
-      },
-      {
-        name: "Brow Design & Color",
-        price: "€40 – €55",
-        duration: "30 Min.",
-        desc: "Feine Formung, Färbung & Coating für den perfekten Brauen-Blick.",
-      },
-      {
-        name: "Wimpern & Brauen-Paket",
-        price: "€120",
-        duration: "120 Min.",
-        desc: "Wimpernverlängerung + Brow Design – der komplette Augen-Look in einem Termin.",
-      },
-    ],
-  },
+export const TREATMENTS: Treatment[] = [
+  // Gesichts- & Körperbehandlungen
+  { id: "express-gesichtsreinigung", name: "Express Gesichtsreinigung", price: "75,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "klassische-gesichtsbehandlung", name: "Klassische Gesichtsbehandlung", price: "90,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "deep-cleansing-akne-behandlung-gesicht", name: "Deep Cleansing Akne-Behandlung Gesicht", price: "125,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "deep-cleansing-akne-behandlung-koerper", name: "Deep Cleansing Akne-Behandlung Körper", price: "175,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "mais-luxe-facial-gesichtsreinigung", name: "Mais Luxe Facial Gesichtsreinigung", price: "150,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "korean-glass-skin-facial", name: "Korean Glass Skin Facial", price: "199,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "enzyme-facial", name: "Enzyme Facial", price: "75,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "fruchtsaeure-peeling-gesicht", name: "Fruchtsäure Peeling Gesicht", price: "80,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "fruchtsaeure-peeling-koerper", name: "Fruchtsäure Peeling Körper", price: "120,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "algen-peeling-gesicht", name: "Algen Peeling Gesicht", price: "110,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "algen-peeling-koerper", name: "Algen Peeling Körper", price: "160,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "lymphdrainage-gesichtsmassage", name: "Lymphdrainage Gesichtsmassage", price: "65,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "oxygeneo-glow-facial", name: "OxyGeneo Glow Facial", price: "135,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "gesichtsstraffung", name: "Gesichtsstraffung", price: "135,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "red-carpet-behandlung", name: "Red Carpet Behandlung", price: "140,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "anti-aging-behandlung", name: "Anti-Aging-Behandlung", price: "135,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "haende-spa", name: "Hände Spa", price: "75,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  { id: "klassische-manikuer", name: "Klassische Maniküre", price: "40,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
+  // Apparative Kosmetik & Specials
+  { id: "mais-lumiere-mikrodermabrasion", name: "Mais Lumière Mikrodermabrasion", price: "80,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "hydradermabrasion", name: "Hydradermabrasion", price: "145,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "ml-aquafacial-tiefenreinigung", name: "ML Aquafacial & Tiefenreinigung", price: "150,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "ml-aquafacial-fruchtsaeurepeeling", name: "ML Aquafacial & Fruchtsäurepeeling", price: "190,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "ml-aquafacial-microneedling", name: "ML Aquafacial & Microneedling", price: "245,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "ml-microneedling-gesicht", name: "ML Microneedling Gesicht", price: "145,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "ml-microneedling-gesicht-hals", name: "ML Microneedling Gesicht & Hals", price: "190,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "ml-microneedling-gesicht-hals-dekollete", name: "ML Microneedling Gesicht, Hals & Dekolleté", price: "240,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "radiofrequenz-meets-microneedling", name: "Radiofrequenz meets Microneedling", price: "195,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "radiofrequenz-meets-hydrafacial", name: "Radiofrequenz meets Hydrafacial", price: "200,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "dermapen-meets-hydrafacial", name: "Dermapen meets Hydrafacial", price: "260,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "ml-bb-glow-augenringe", name: "ML BB Glow Augenringe", price: "75,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "mais-lumiere-bb-glow-gesicht", name: "Mais Lumière BB Glow Gesicht", price: "150,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "ml-bb-glow-gesicht-hals", name: "ML BB Glow Gesicht & Hals", price: "190,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  { id: "premium-hautverjuengung-dreiklang", name: "Premium-Hautverjüngung Dreiklang", price: "310,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
+  // Wimpernverlängerung
+  { id: "wimpernverlaengerung-1-1-klassisch", name: "1:1 Klassische Wimpernverlängerung", price: "150,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "wimpernverlaengerung-refill-2-wochen", name: "1:1 Lash Refill nach 2 Wochen", price: "60,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "wimpernverlaengerung-refill-3-wochen", name: "1:1 Lash Refill nach 3 Wochen", price: "70,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "wimpernverlaengerung-refill-4-wochen", name: "1:1 Lash Refill nach 4 Wochen", price: "80,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "volumen-lashextension-2d-5d", name: "Volumen Lashextension 2D–5D", price: "180,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "volumen-refill-2-wochen", name: "2D–5D Volumen Refill nach 2 Wochen", price: "70,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "volumen-refill-3-wochen", name: "2D–5D Volumen Refill nach 3 Wochen", price: "80,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "volumen-refill-4-wochen", name: "2D–5D Volumen Refill nach 4 Wochen", price: "90,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "maxx-mega-volume-lashextension", name: "Maxx Mega Volume Lashextension", price: "195,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "maxx-volume-refill-2-wochen", name: "Maxx Volume Refill nach 2 Wochen", price: "75,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "maxx-volume-refill-3-wochen", name: "Maxx Volume Refill nach 3 Wochen", price: "85,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  { id: "maxx-volume-refill-4-wochen", name: "Maxx Volume Refill nach 4 Wochen", price: "95,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
+  // Lash & Brow Styling & Lifting
+  { id: "wimpern-faerben", name: "Wimpern färben", price: "20,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
+  { id: "augenbrauen-faerben", name: "Augenbrauen färben", price: "20,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
+  { id: "augenbrauen-wimpern-faerben", name: "Augenbrauen & Wimpern färben", price: "35,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
+  { id: "augenbrauen-forming", name: "Augenbrauen Forming", price: "35,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
+  { id: "ml-koreanisches-brow-lifting-faerben", name: "ML Koreanisches Brow Lifting inkl. Färben", price: "80,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
+  { id: "ml-koreanisches-lash-lifting-faerben", name: "ML Koreanisches Lash Lifting inkl. Färben", price: "80,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
+  { id: "luxus-brow-lash-lifting", name: "Luxus Koreanisches Brow & Lash Lifting", price: "140,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
 ];
 
 export const GALLERY = [

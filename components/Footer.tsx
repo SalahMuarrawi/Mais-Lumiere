@@ -58,7 +58,7 @@ export default function Footer() {
                   rel="noreferrer"
                   className="transition-colors hover:text-gold-light"
                 >
-                  @more_maislumiere
+                  {SITE.instagramName}
                 </a>
               </li>
             </ul>
@@ -70,27 +70,7 @@ export default function Footer() {
               Öffnungszeiten
             </h3>
             <ul className="space-y-2 text-sm">
-              {HOURS.map((h) => (
-                <li
-                  key={h.days}
-                  className={
-                    h.time === "geschlossen"
-                      ? "flex justify-between gap-3 text-ink-soft/70"
-                      : "flex justify-between gap-3"
-                  }
-                >
-                  <span>{h.days}</span>
-                  <span
-                    className={
-                      h.time === "geschlossen"
-                        ? "italic"
-                        : "whitespace-nowrap text-white"
-                    }
-                  >
-                    {h.time}
-                  </span>
-                </li>
-              ))}
+              <li>{HOURS}</li>
             </ul>
           </div>
         </div>

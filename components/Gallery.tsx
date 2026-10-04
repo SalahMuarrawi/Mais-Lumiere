@@ -1,4 +1,4 @@
-import { GALLERY } from "@/lib/data";
+import { GALLERY, SITE } from "@/lib/data";
 
 export default function Gallery() {
   return (
@@ -18,7 +18,7 @@ export default function Gallery() {
             </p>
           </div>
           <a
-            href="https://www.instagram.com/more_maislumiere"
+            href={SITE.instagram}
             target="_blank"
             rel="noreferrer"
             className="whitespace-nowrap text-sm text-gold-dark underline underline-offset-4 transition-colors hover:text-ink"

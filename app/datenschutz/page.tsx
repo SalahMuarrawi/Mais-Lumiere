@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import { LEGAL, SITE } from "@/lib/data";
 
 export const metadata = {
-  title: `Datenschutz – ${SITE.name}`,
+  title: "Datenschutz",
   description: `Datenschutzerklärung von ${SITE.name}, Graz.`,
 };
 

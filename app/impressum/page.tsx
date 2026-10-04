@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import { LEGAL, SITE } from "@/lib/data";
 
 export const metadata = {
-  title: `Impressum – ${SITE.name}`,
+  title: "Impressum",
   description: `Impressum und Anbieterkennzeichnung von ${SITE.name}, Graz.`,
 };
 

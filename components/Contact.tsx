@@ -55,36 +55,18 @@ export default function Contact() {
               <h3 className="mb-3 text-xs uppercase tracking-[0.3em] text-gold-light/80">
                 Öffnungszeiten
               </h3>
-              <dl className="space-y-2.5">
-                {HOURS.map((h) => (
-                  <div
-                    key={h.days}
-                    className="flex items-baseline justify-between gap-4 border-b border-white/10 pb-2.5 text-sm"
-                  >
-                    <dt className="text-ink-soft">{h.days}</dt>
-                    <dd
-                      className={
-                        h.time === "geschlossen"
-                          ? "text-ink-soft/60 italic"
-                          : "whitespace-nowrap text-right text-white"
-                      }
-                    >
-                      {h.time}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="text-lg leading-relaxed">{HOURS}</p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <BookingButton />
               <a
-                href="https://www.instagram.com/more_maislumiere"
+                href={SITE.instagram}
                 target="_blank"
                 rel="noreferrer"
                 className="text-sm text-ink-soft transition-colors hover:text-gold-light"
               >
-                Instagram: @more_maislumiere
+                Instagram: {SITE.instagramName}
               </a>
             </div>
           </div>
