@@ -1,4 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Temporary agent debug, probes & logs
+
+*.log
+.*.log
+*.txt
+.*.txt
+.tmp-*
 
 # dependencies
 /node_modules
