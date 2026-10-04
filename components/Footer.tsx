@@ -6,7 +6,30 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/10 bg-ink-darker text-ink-soft">
+    <>
+      {/* Pre-Footer CTA – Treatwell */}
+      <section
+        aria-label="Termin reservieren"
+        className="bg-ink-darker py-20 text-white sm:py-28"
+      >
+        <div className="mx-auto max-w-4xl px-5 text-center sm:px-8">
+          <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-light">
+            Termine über Treatwell
+          </p>
+          <h2 className="font-serif text-3xl leading-tight sm:text-4xl">
+            Bereit für Ihren neuen Glow?
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+            Reservieren Sie jetzt Ihre Wunschbehandlung im {SITE.name} –
+            flexible Termine, transparente Preise.
+          </p>
+          <div className="mt-9 flex justify-center">
+            <BookingButton />
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 bg-ink-darker text-ink-soft">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 md:grid-cols-4">
           {/* Brand */}
@@ -21,9 +44,6 @@ export default function Footer() {
               Ihr Kosmetikstudio in Graz für Gesichtsbehandlungen, OxyGeneo,
               Wimpern-Design &amp; Beauty – mit Herz und Fachkompetenz.
             </p>
-            <div className="mt-6">
-              <BookingButton />
-            </div>
           </div>
 
           {/* Kontakt */}
@@ -92,6 +112,7 @@ export default function Footer() {
           </nav>
         </div>
       </div>
-    </footer>
+      </footer>
+    </>
   );
 }

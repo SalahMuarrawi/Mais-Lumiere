@@ -1,4 +1,3 @@
-import BookingButton from "./BookingButton";
 import { HOURS, MAP_EMBED, SITE } from "@/lib/data";
 
 export default function Contact() {
@@ -58,8 +57,7 @@ export default function Contact() {
               <p className="text-lg leading-relaxed">{HOURS}</p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <BookingButton />
+            <div>
               <a
                 href={SITE.instagram}
                 target="_blank"

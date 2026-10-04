@@ -7,7 +7,10 @@
   --color-gold: #b08d57;
   --color-gold-dark: #91703f;
   --color-ink: #2b2622;
+  --color-ink-darker: #1f1a15;
+  --color-ink-soft: #d4c9ba;
   --color-mist: #7c7368;
+  --color-gold-light: #d8bd93;
 
   /* Schriftarten (Jost & Cormorant Garamond via <link> im Root Layout) */
   --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
