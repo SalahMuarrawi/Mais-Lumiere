@@ -8,11 +8,10 @@
   --color-gold-dark: #91703f;
   --color-ink: #2b2622;
   --color-mist: #7c7368;
-}
 
-@theme inline {
-  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
+  /* Schriftarten (Jost & Cormorant Garamond via <link> im Root Layout) */
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
 }
 
 html {

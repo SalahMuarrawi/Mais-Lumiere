@@ -1,0 +1,92 @@
+.git
+.next
+app
+components
+lib
+node_modules
+public
+c:\Users\Admin\Qwen_Sandbox\components\About.tsx
+c:\Users\Admin\Qwen_Sandbox\components\BookingButton.tsx
+c:\Users\Admin\Qwen_Sandbox\components\Contact.tsx
+c:\Users\Admin\Qwen_Sandbox\components\Footer.tsx
+c:\Users\Admin\Qwen_Sandbox\components\Gallery.tsx
+c:\Users\Admin\Qwen_Sandbox\components\Header.tsx
+c:\Users\Admin\Qwen_Sandbox\components\Hero.tsx
+c:\Users\Admin\Qwen_Sandbox\components\Testimonials.tsx
+c:\Users\Admin\Qwen_Sandbox\components\Treatments.tsx
+c:\Users\Admin\Qwen_Sandbox\lib\data.ts
+c:\Users\Admin\Qwen_Sandbox\public\file.svg
+c:\Users\Admin\Qwen_Sandbox\public\globe.svg
+c:\Users\Admin\Qwen_Sandbox\public\images
+c:\Users\Admin\Qwen_Sandbox\public\next.svg
+c:\Users\Admin\Qwen_Sandbox\public\vercel.svg
+c:\Users\Admin\Qwen_Sandbox\public\window.svg
+c:\Users\Admin\Qwen_Sandbox\public\images\3.png
+c:\Users\Admin\Qwen_Sandbox\public\images\4.png
+c:\Users\Admin\Qwen_Sandbox\public\images\Bildschirmfoto 2026-04-14 um 23.24.36.png
+c:\Users\Admin\Qwen_Sandbox\public\images\Bildschirmfoto 2026-04-14 um 23.32.55.png
+c:\Users\Admin\Qwen_Sandbox\public\images\Bildschirmfoto 2026-04-25 um 23.57.06.png
+c:\Users\Admin\Qwen_Sandbox\public\images\Bildschirmfoto 2026-04-25 um 23.59.25.png
+c:\Users\Admin\Qwen_Sandbox\public\images\Eroùffnung.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\Gemini_Generated_Image_1yrnq71yrnq71yrn.png
+c:\Users\Admin\Qwen_Sandbox\public\images\Gemini_Generated_Image_i78p5ti78p5ti78p.png
+c:\Users\Admin\Qwen_Sandbox\public\images\Gemini_Generated_Image_xft4uqxft4uqxft4.png
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2421.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2422.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2423.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2424.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2425.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2426.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2432.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2433.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2434.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2435.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2436.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2437.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2438.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2440.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2441.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2442.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2443.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2444.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2445.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2446.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2447.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2448.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2449.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\IMG_2450.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\Lumiere-Logo.png
+c:\Users\Admin\Qwen_Sandbox\public\images\Mais_Lumiere_Visitenkarte_Flyer_etc_v1 (2).png
+c:\Users\Admin\Qwen_Sandbox\public\images\placeholder-treatment.jpg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-03-27 at 21.14.26.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-02 at 23.31.44.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-12 at 23.51.26.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-12 at 23.51.27.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-13 at 00.07.53 (1).jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-13 at 00.07.53 (2).jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-13 at 00.07.53.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 10.38.33 (1).jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 10.38.33.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 10.40.59 (1).jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 10.43.24.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 17.47.52 (1).jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 17.47.52.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 17.56.46 (1).jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 17.56.46.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 17.58.28.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 17.59.06.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 18.03.51 (1).jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 18.03.51.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 18.05.08 (1).jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 18.05.08.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 18.09.17.jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 18.11.10 (1).jpeg
+c:\Users\Admin\Qwen_Sandbox\public\images\WhatsApp Image 2026-04-15 at 18.11.10.jpeg
+c:\Users\Admin\Qwen_Sandbox\app\datenschutz
+c:\Users\Admin\Qwen_Sandbox\app\favicon.ico
+c:\Users\Admin\Qwen_Sandbox\app\globals.css
+c:\Users\Admin\Qwen_Sandbox\app\impressum
+c:\Users\Admin\Qwen_Sandbox\app\layout.tsx
+c:\Users\Admin\Qwen_Sandbox\app\page.tsx
+c:\Users\Admin\Qwen_Sandbox\app\datenschutz\page.tsx
+c:\Users\Admin\Qwen_Sandbox\app\impressum\page.tsx

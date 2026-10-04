@@ -107,3 +107,59 @@
   74 |                 <li
   75 |                   key={h.days}
   76 |                   className={
+ GET / 200 in 184ms (next.js: 48ms, application-code: 135ms)
+ GET / 200 in 8ms (next.js: 3ms, application-code: 4ms)
+ GET / 200 in 8ms (next.js: 3ms, application-code: 4ms)
+ GET / 200 in 11ms (next.js: 4ms, application-code: 6ms)
+ GET / 200 in 9ms (next.js: 4ms, application-code: 5ms)
+✓ Compiled in 240ms
+ GET / 200 in 668ms (next.js: 314ms, application-code: 355ms)
+ GET / 200 in 304ms (next.js: 5ms, application-code: 299ms)
+ GET / 200 in 302ms (next.js: 5ms, application-code: 297ms)
+ GET / 200 in 294ms (next.js: 4ms, application-code: 290ms)
+ GET / 200 in 295ms (next.js: 4ms, application-code: 291ms)
+ GET / 200 in 291ms (next.js: 4ms, application-code: 287ms)
+ GET / 200 in 277ms (next.js: 3ms, application-code: 274ms)
+ GET / 200 in 230ms (next.js: 4ms, application-code: 227ms)
+ GET / 200 in 184ms (next.js: 4ms, application-code: 180ms)
+ GET / 200 in 140ms (next.js: 4ms, application-code: 135ms)
+ GET / 200 in 90ms (next.js: 3ms, application-code: 86ms)
+ GET / 200 in 43ms (next.js: 4ms, application-code: 39ms)
+✓ Compiled in 154ms
+✓ Compiled in 40ms
+ GET / 200 in 317ms (next.js: 42ms, application-code: 275ms)
+ GET / 200 in 255ms (next.js: 3ms, application-code: 252ms)
+ GET / 200 in 262ms (next.js: 3ms, application-code: 259ms)
+ GET / 200 in 263ms (next.js: 3ms, application-code: 260ms)
+ GET / 200 in 229ms (next.js: 3ms, application-code: 225ms)
+ GET / 200 in 229ms (next.js: 4ms, application-code: 225ms)
+ GET / 200 in 238ms (next.js: 4ms, application-code: 234ms)
+ GET / 200 in 211ms (next.js: 4ms, application-code: 207ms)
+ GET / 200 in 189ms (next.js: 4ms, application-code: 185ms)
+ GET / 200 in 147ms (next.js: 3ms, application-code: 143ms)
+ GET / 200 in 105ms (next.js: 4ms, application-code: 102ms)
+ GET / 200 in 68ms (next.js: 3ms, application-code: 64ms)
+ GET / 200 in 47ms (next.js: 3ms, application-code: 44ms)
+ GET / 200 in 28ms (next.js: 4ms, application-code: 24ms)
+✓ Compiled in 35ms
+✓ Compiled in 79ms
+ GET / 200 in 54ms (next.js: 5ms, application-code: 50ms)
+✓ Compiled in 26ms
+ GET / 200 in 53ms (next.js: 5ms, application-code: 48ms)
+⨯ ReferenceError: cormorant is not defined
+    at RootLayout (app\layout.tsx:41:35)
+  39 | }: Readonly<{ children: React.ReactNode }>) {
+  40 |   return (
+> 41 |     <html lang="de" className={`${cormorant.variable} ${jost.variable}`}>
+     |                                   ^
+  42 |       <body className="min-h-screen bg-cream font-sans text-ink antialiased">
+  43 |         <Header />
+  44 |         <main className="flex-1">{children}</main> {
+  digest: '1440425361'
+}
+ GET / 200 in 66ms (next.js: 14ms, application-code: 52ms)
+ GET / 200 in 257ms (next.js: 5ms, application-code: 252ms)
+✓ Compiled in 64ms
+✓ Compiled in 40ms
+ GET / 200 in 56ms (next.js: 6ms, application-code: 50ms)
+ GET / 200 in 64ms (next.js: 6ms, application-code: 58ms)

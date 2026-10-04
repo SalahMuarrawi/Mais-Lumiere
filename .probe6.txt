@@ -1,0 +1,17 @@
+C:\Users\Admin\Qwen_Sandbox\app\datenschutz
+C:\Users\Admin\Qwen_Sandbox\app\impressum
+C:\Users\Admin\Qwen_Sandbox\app\favicon.ico
+C:\Users\Admin\Qwen_Sandbox\app\globals.css
+C:\Users\Admin\Qwen_Sandbox\app\layout.tsx
+C:\Users\Admin\Qwen_Sandbox\app\page.tsx
+C:\Users\Admin\Qwen_Sandbox\app\datenschutz\page.tsx
+C:\Users\Admin\Qwen_Sandbox\app\impressum\page.tsx
+C:\Users\Admin\Qwen_Sandbox\components\About.tsx
+C:\Users\Admin\Qwen_Sandbox\components\BookingButton.tsx
+C:\Users\Admin\Qwen_Sandbox\components\Contact.tsx
+C:\Users\Admin\Qwen_Sandbox\components\Footer.tsx
+C:\Users\Admin\Qwen_Sandbox\components\Gallery.tsx
+C:\Users\Admin\Qwen_Sandbox\components\Header.tsx
+C:\Users\Admin\Qwen_Sandbox\components\Hero.tsx
+C:\Users\Admin\Qwen_Sandbox\components\Testimonials.tsx
+C:\Users\Admin\Qwen_Sandbox\components\Treatments.tsx

@@ -6,10 +6,10 @@ import BookingButton from "./BookingButton";
 import { SITE } from "@/lib/data";
 
 const NAV_LINKS = [
-  { href: "#behandlungen", label: "Behandlungen" },
+  { href: "/behandlungen", label: "Behandlungen" },
   { href: "#studio", label: "Studio" },
   { href: "#galerie", label: "Galerie" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Header() {

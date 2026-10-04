@@ -179,7 +179,7 @@ export const NAV = [
 export const HOURS = SITE.hours;
 
 export const MAP_EMBED =
-  "https://www.google.com/maps?q=Stubenberggasse%208%2F1%2C%208010%20Graz&output=embed";
+  "https://www.google.com/maps?q=Stubenberggasse%208%2F1%2C%208020%20Graz&output=embed";
 
 export const LEGAL = {
   imprint: {
