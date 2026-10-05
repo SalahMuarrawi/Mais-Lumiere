@@ -67,88 +67,411 @@ export const TREATMENT_CATEGORY_ORDER: TreatmentCategory[] = [
 ];
 
 export const TREATMENTS: Treatment[] = [
-  // Gesichts- & Körperbehandlungen
-  { id: "express-gesichtsreinigung", name: "Express Gesichtsreinigung", price: "75,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "klassische-gesichtsbehandlung", name: "Klassische Gesichtsbehandlung", price: "90,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "deep-cleansing-akne-behandlung-gesicht", name: "Deep Cleansing Akne-Behandlung Gesicht", price: "125,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "deep-cleansing-akne-behandlung-koerper", name: "Deep Cleansing Akne-Behandlung Körper", price: "175,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "mais-luxe-facial-gesichtsreinigung", name: "Mais Luxe Facial Gesichtsreinigung", price: "150,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "korean-glass-skin-facial", name: "Korean Glass Skin Facial", price: "199,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "enzyme-facial", name: "Enzyme Facial", price: "75,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "fruchtsaeure-peeling-gesicht", name: "Fruchtsäure Peeling Gesicht", price: "80,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "fruchtsaeure-peeling-koerper", name: "Fruchtsäure Peeling Körper", price: "120,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "algen-peeling-gesicht", name: "Algen Peeling Gesicht", price: "110,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "algen-peeling-koerper", name: "Algen Peeling Körper", price: "160,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "lymphdrainage-gesichtsmassage", name: "Lymphdrainage Gesichtsmassage", price: "65,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "oxygeneo-glow-facial", name: "OxyGeneo Glow Facial", price: "135,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "gesichtsstraffung", name: "Gesichtsstraffung", price: "135,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "red-carpet-behandlung", name: "Red Carpet Behandlung", price: "140,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "anti-aging-behandlung", name: "Anti-Aging-Behandlung", price: "135,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "haende-spa", name: "Hände Spa", price: "75,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  { id: "klassische-manikuer", name: "Klassische Maniküre", price: "40,00 €", category: "facial-body", image: PLACEHOLDER_IMAGE },
-  // Apparative Kosmetik & Specials
-  { id: "mais-lumiere-mikrodermabrasion", name: "Mais Lumière Mikrodermabrasion", price: "80,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "hydradermabrasion", name: "Hydradermabrasion", price: "145,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "ml-aquafacial-tiefenreinigung", name: "ML Aquafacial & Tiefenreinigung", price: "150,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "ml-aquafacial-fruchtsaeurepeeling", name: "ML Aquafacial & Fruchtsäurepeeling", price: "190,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "ml-aquafacial-microneedling", name: "ML Aquafacial & Microneedling", price: "245,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "ml-microneedling-gesicht", name: "ML Microneedling Gesicht", price: "145,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "ml-microneedling-gesicht-hals", name: "ML Microneedling Gesicht & Hals", price: "190,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "ml-microneedling-gesicht-hals-dekollete", name: "ML Microneedling Gesicht, Hals & Dekolleté", price: "240,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "radiofrequenz-meets-microneedling", name: "Radiofrequenz meets Microneedling", price: "195,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "radiofrequenz-meets-hydrafacial", name: "Radiofrequenz meets Hydrafacial", price: "200,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "dermapen-meets-hydrafacial", name: "Dermapen meets Hydrafacial", price: "260,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "ml-bb-glow-augenringe", name: "ML BB Glow Augenringe", price: "75,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "mais-lumiere-bb-glow-gesicht", name: "Mais Lumière BB Glow Gesicht", price: "150,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "ml-bb-glow-gesicht-hals", name: "ML BB Glow Gesicht & Hals", price: "190,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  { id: "premium-hautverjuengung-dreiklang", name: "Premium-Hautverjüngung Dreiklang", price: "310,00 €", category: "apparative", image: PLACEHOLDER_IMAGE },
-  // Wimpernverlängerung
-  { id: "wimpernverlaengerung-1-1-klassisch", name: "1:1 Klassische Wimpernverlängerung", price: "150,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "wimpernverlaengerung-refill-2-wochen", name: "1:1 Lash Refill nach 2 Wochen", price: "60,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "wimpernverlaengerung-refill-3-wochen", name: "1:1 Lash Refill nach 3 Wochen", price: "70,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "wimpernverlaengerung-refill-4-wochen", name: "1:1 Lash Refill nach 4 Wochen", price: "80,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "volumen-lashextension-2d-5d", name: "Volumen Lashextension 2D–5D", price: "180,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "volumen-refill-2-wochen", name: "2D–5D Volumen Refill nach 2 Wochen", price: "70,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "volumen-refill-3-wochen", name: "2D–5D Volumen Refill nach 3 Wochen", price: "80,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "volumen-refill-4-wochen", name: "2D–5D Volumen Refill nach 4 Wochen", price: "90,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "maxx-mega-volume-lashextension", name: "Maxx Mega Volume Lashextension", price: "195,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "maxx-volume-refill-2-wochen", name: "Maxx Volume Refill nach 2 Wochen", price: "75,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "maxx-volume-refill-3-wochen", name: "Maxx Volume Refill nach 3 Wochen", price: "85,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  { id: "maxx-volume-refill-4-wochen", name: "Maxx Volume Refill nach 4 Wochen", price: "95,00 €", category: "lashes", image: PLACEHOLDER_IMAGE },
-  // Lash & Brow Styling & Lifting
-  { id: "wimpern-faerben", name: "Wimpern färben", price: "20,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
-  { id: "augenbrauen-faerben", name: "Augenbrauen färben", price: "20,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
-  { id: "augenbrauen-wimpern-faerben", name: "Augenbrauen & Wimpern färben", price: "35,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
-  { id: "augenbrauen-forming", name: "Augenbrauen Forming", price: "35,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
-  { id: "ml-koreanisches-brow-lifting-faerben", name: "ML Koreanisches Brow Lifting inkl. Färben", price: "80,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
-  { id: "ml-koreanisches-lash-lifting-faerben", name: "ML Koreanisches Lash Lifting inkl. Färben", price: "80,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
-  { id: "luxus-brow-lash-lifting", name: "Luxus Koreanisches Brow & Lash Lifting", price: "140,00 €", category: "brows-lifting", image: PLACEHOLDER_IMAGE },
+  // ==========================================
+  // 1. GESICHTS- & KÖRPERBEHANDLUNGEN (18)
+  // ==========================================
+  {
+    id: "express-gesichtsreinigung",
+    name: "Express Gesichtsreinigung",
+    price: "75,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/37072271/pexels-photo-37072271.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "klassische-gesichtsbehandlung",
+    name: "Klassische Gesichtsbehandlung",
+    price: "90,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/37273224/pexels-photo-37273224.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "deep-cleansing-akne-gesicht",
+    name: "Deep Cleansing Akne-Behandlung Gesicht",
+    price: "125,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/5069588/pexels-photo-5069588.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "deep-cleansing-akne-koerper",
+    name: "Deep Cleansing Akne-Behandlung Körper",
+    price: "175,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/16131212/pexels-photo-16131212.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "mais-luxe-facial",
+    name: "Mais Luxe Facial Gesichtsreinigung",
+    price: "150,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/5042636/pexels-photo-5042636.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "korean-glass-skin-facial",
+    name: "Korean Glass Skin Facial",
+    price: "199,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/30793292/pexels-photo-30793292.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "enzyme-facial",
+    name: "Enzyme Facial",
+    price: "75,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/32646004/pexels-photo-32646004.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "fruchtsaeure-peeling-gesicht",
+    name: "Fruchtsäure Peeling Gesicht",
+    price: "80,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/10192208/pexels-photo-10192208.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "fruchtsaeure-peeling-koerper",
+    name: "Fruchtsäure Peeling Körper",
+    price: "120,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/3738375/pexels-photo-3738375.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "algen-peeling-gesicht",
+    name: "Algen Peeling Gesicht",
+    price: "110,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/14187891/pexels-photo-14187891.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "algen-peeling-koerper",
+    name: "Algen Peeling Körper",
+    price: "160,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/8842699/pexels-photo-8842699.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "lymphdrainage-gesichtsmassage",
+    name: "Lymphdrainage Gesichtsmassage",
+    price: "65,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/25642678/pexels-photo-25642678.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "oxygeneo-glow-facial",
+    name: "OxyGeneo Glow Facial",
+    price: "135,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/32705765/pexels-photo-32705765.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "gesichtsstraffung",
+    name: "Gesichtsstraffung",
+    price: "135,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/25642674/pexels-photo-25642674.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "red-carpet-behandlung",
+    name: "Red Carpet Behandlung",
+    price: "140,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/4586723/pexels-photo-4586723.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "anti-aging-behandlung",
+    name: "Anti-Aging-Behandlung",
+    price: "135,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/7582555/pexels-photo-7582555.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "haende-spa",
+    name: "Hände Spa",
+    price: "75,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/6187265/pexels-photo-6187265.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "klassische-manikuere",
+    name: "Klassische Maniküre",
+    price: "40,00 €",
+    category: "facial-body",
+    image: "https://images.pexels.com/photos/6135681/pexels-photo-6135681.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+
+  // ==========================================
+  // 2. APPARATIVE KOSMETIK & SPECIALS (15)
+  // ==========================================
+  {
+    id: "mais-lumiere-mikrodermabrasion",
+    name: "Mais Lumière Mikrodermabrasion",
+    price: "80,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/20683632/pexels-photo-20683632.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "hydradermabrasion",
+    name: "Hydradermabrasion",
+    price: "145,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/29648627/pexels-photo-29648627.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-aquafacial-tiefenreinigung",
+    name: "ML Aquafacial & Tiefenreinigung",
+    price: "150,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/18209809/pexels-photo-18209809.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-aquafacial-fruchtsaeurepeeling",
+    name: "ML Aquafacial & Fruchtsäurepeeling",
+    price: "190,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/14438367/pexels-photo-14438367.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-aquafacial-microneedling",
+    name: "ML Aquafacial & Microneedling",
+    price: "245,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/30809949/pexels-photo-30809949.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-microneedling-gesicht",
+    name: "ML Microneedling Gesicht",
+    price: "145,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/29648626/pexels-photo-29648626.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-microneedling-gesicht-hals",
+    name: "ML Microneedling Gesicht & Hals",
+    price: "190,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/7789640/pexels-photo-7789640.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-microneedling-gesicht-hals-dekollete",
+    name: "ML Microneedling Gesicht, Hals & Dekolleté",
+    price: "240,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/3736280/pexels-photo-3736280.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "radiofrequenz-meets-microneedling",
+    name: "Radiofrequenz meets Microneedling",
+    price: "195,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/19242408/pexels-photo-19242408.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "radiofrequenz-meets-hydrafacial",
+    name: "Radiofrequenz meets Hydrafacial",
+    price: "200,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/10600169/pexels-photo-10600169.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "dermapen-meets-hydrafacial",
+    name: "Dermapen meets Hydrafacial",
+    price: "260,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/5069429/pexels-photo-5069429.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-bb-glow-augenringe",
+    name: "ML BB Glow Augenringe",
+    price: "75,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/5069430/pexels-photo-5069430.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "mais-lumiere-bb-glow-gesicht",
+    name: "Mais Lumière BB Glow Gesicht",
+    price: "150,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/6476077/pexels-photo-6476077.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-bb-glow-gesicht-hals",
+    name: "ML BB Glow Gesicht & Hals",
+    price: "190,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/9442294/pexels-photo-9442294.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "premium-hautverjuengung-dreiklang",
+    name: "Premium-Hautverjüngung Dreiklang",
+    price: "310,00 €",
+    category: "apparative",
+    image: "https://images.pexels.com/photos/3985332/pexels-photo-3985332.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+
+  // ==========================================
+  // 3. WIMPERNVERLÄNGERUNG (12)
+  // ==========================================
+  {
+    id: "1-1-klassische-wimpernverlaengerung",
+    name: "1:1 Klassische Wimpernverlängerung",
+    price: "150,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/5128218/pexels-photo-5128218.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "1-1-lash-refill-2-wochen",
+    name: "1:1 Lash Refill nach 2 Wochen",
+    price: "60,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/36930354/pexels-photo-36930354.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "1-1-lash-refill-3-wochen",
+    name: "1:1 Lash Refill nach 3 Wochen",
+    price: "70,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/33723106/pexels-photo-33723106.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "1-1-lash-refill-4-wochen",
+    name: "1:1 Lash Refill nach 4 Wochen",
+    price: "80,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/29877726/pexels-photo-29877726.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "volumen-lashextension-2d-5d",
+    name: "Volumen Lashextension 2D–5D",
+    price: "180,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/35013077/pexels-photo-35013077.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "volumen-refill-2-wochen",
+    name: "2D–5D Volumen Refill nach 2 Wochen",
+    price: "70,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/34930118/pexels-photo-34930118.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "volumen-refill-3-wochen",
+    name: "2D–5D Volumen Refill nach 3 Wochen",
+    price: "80,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/38194465/pexels-photo-38194465.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "volumen-refill-4-wochen",
+    name: "2D–5D Volumen Refill nach 4 Wochen",
+    price: "90,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/5128234/pexels-photo-5128234.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "maxx-mega-volume-lashextension",
+    name: "Maxx Mega Volume Lashextension",
+    price: "195,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/5128233/pexels-photo-5128233.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "maxx-volume-refill-2-wochen",
+    name: "Maxx Volume Refill nach 2 Wochen",
+    price: "75,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/33637609/pexels-photo-33637609.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "maxx-volume-refill-3-wochen",
+    name: "Maxx Volume Refill nach 3 Wochen",
+    price: "85,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/7755531/pexels-photo-7755531.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "maxx-volume-refill-4-wochen",
+    name: "Maxx Volume Refill nach 4 Wochen",
+    price: "95,00 €",
+    category: "lashes",
+    image: "https://images.pexels.com/photos/7216305/pexels-photo-7216305.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+
+  // ==========================================
+  // 4. LASH & BROW STYLING & LIFTING (7)
+  // ==========================================
+  {
+    id: "wimpern-faerben",
+    name: "Wimpern färben",
+    price: "20,00 €",
+    category: "brows-lifting",
+    image: "https://images.pexels.com/photos/5128222/pexels-photo-5128222.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "augenbrauen-faerben",
+    name: "Augenbrauen färben",
+    price: "20,00 €",
+    category: "brows-lifting",
+    image: "https://images.pexels.com/photos/33580445/pexels-photo-33580445.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "augenbrauen-wimpern-faerben",
+    name: "Augenbrauen & Wimpern färben",
+    price: "35,00 €",
+    category: "brows-lifting",
+    image: "https://images.pexels.com/photos/6135621/pexels-photo-6135621.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "augenbrauen-forming",
+    name: "Augenbrauen Forming",
+    price: "35,00 €",
+    category: "brows-lifting",
+    image: "https://images.pexels.com/photos/33607397/pexels-photo-33607397.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-koreanisches-brow-lifting",
+    name: "ML Koreanisches Brow Lifting inkl. Färben",
+    price: "80,00 €",
+    category: "brows-lifting",
+    image: "https://images.pexels.com/photos/38194463/pexels-photo-38194463.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "ml-koreanisches-lash-lifting",
+    name: "ML Koreanisches Lash Lifting inkl. Färben",
+    price: "80,00 €",
+    category: "brows-lifting",
+    image: "https://images.pexels.com/photos/7446923/pexels-photo-7446923.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    id: "luxus-koreanisches-brow-lash-lifting",
+    name: "Luxus Koreanisches Brow & Lash Lifting",
+    price: "140,00 €",
+    category: "brows-lifting",
+    image: "https://images.pexels.com/photos/29588096/pexels-photo-29588096.jpeg?auto=compress&cs=tinysrgb&w=800"
+  }
 ];
 
 export const GALLERY = [
   {
     alt: "Saubere, strahlende Haut nach einer Gesichtsbehandlung",
-    src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80&auto=format&fit=crop",
+    src: "/images/WhatsApp Image 2026-04-12 at 23.51.26.jpeg",
   },
   {
     alt: "Pflegeprodukte und Seren in einer ruhigen Komposition",
-    src: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1200&q=80&auto=format&fit=crop",
+    src: "/images/WhatsApp Image 2026-04-13 at 00.07.53.jpeg",
   },
   {
     alt: "Beruhigende Massagebehandlung mit cremiger Textur",
-    src: "https://images.unsplash.com/photo-1519823541166-386545d316f0?w=1200&q=80&auto=format&fit=crop",
+    src: "/images/WhatsApp Image 2026-04-15 at 17.59.06.jpeg",
   },
   {
     alt: "Frau mit glatter, gesunder Haut im Studio-Licht",
-    src: "https://images.unsplash.com/photo-1487412720507-e7ab3e6476f3?w=1200&q=80&auto=format&fit=crop",
+    src: "/images/WhatsApp Image 2026-04-15 at 18.09.17.jpeg",
   },
   {
     alt: "Aromatherapie und Entspannung im Kosmetikstudio",
-    src: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80&auto=format&fit=crop",
+    src: "/images/WhatsApp Image 2026-04-15 at 18.05.08 (1).jpeg"
   },
   {
     alt: "Detail einer Wimpernverlängerung",
-    src: "https://images.unsplash.com/photo-1583000899526-8ca013543b36?w=1200&q=80&auto=format&fit=crop",
+    src: "/images/Bildschirmfoto 2026-04-25 um 23.57.06.png",
   },
 ];
 
