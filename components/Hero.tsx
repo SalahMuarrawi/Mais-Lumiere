@@ -28,9 +28,9 @@ export default function Hero() {
       <img
         src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=2000&q=80&auto=format&fit=crop"
         alt="Strahlende, gepflegte Haut"
-        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
+        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-60"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f0e0e]/95 via-[#0f0e0e]/75 to-[#141211]" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f0e0e]/85 via-[#0f0e0e]/40 to-[#141211]" />
 
       <motion.div
         initial="hidden"

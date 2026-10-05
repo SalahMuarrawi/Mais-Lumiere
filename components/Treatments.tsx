@@ -9,7 +9,7 @@ const HIGHLIGHT_IDS = [
   "oxygeneo-glow-facial",
   "korean-glass-skin-facial",
   "ml-microneedling-gesicht",
-  "luxus-brow-lash-lifting",
+  "luxus-koreanisches-brow-lash-lifting",
 ] as const;
 
 function TreatmentCard({ treatment, index }: { treatment: Treatment; index: number }) {
