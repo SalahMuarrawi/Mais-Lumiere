@@ -2,7 +2,7 @@ import { HOURS, MAP_EMBED, SITE } from "@/lib/data";
 
 export default function Contact() {
   return (
-    <section id="kontakt" className="bg-ink py-20 text-white sm:py-28">
+    <section id="kontakt" className="bg-[#0f0e0e] py-20 text-white sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="max-w-2xl">
           <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-light">

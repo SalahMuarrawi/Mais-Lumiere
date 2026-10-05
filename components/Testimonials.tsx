@@ -11,7 +11,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <figure
               key={t.name}
-              className="flex flex-col rounded-2xl bg-white p-7 shadow-[0_20px_60px_-45px_rgba(28,26,23,0.5)]"
+              className="flex flex-col rounded-2xl border border-white/10 bg-[#1f1b19] p-7 shadow-[0_24px_60px_-30px_rgba(0,0,0,0.8)]"
             >
               <div className="mb-4 text-gold-dark" aria-hidden>
                 ★★★★★

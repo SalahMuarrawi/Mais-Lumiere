@@ -19,7 +19,7 @@ function TreatmentCard({ treatment, index }: { treatment: Treatment; index: numb
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.55, delay: index * 0.09, ease: [0.22, 1, 0.36, 1] }}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-[0_8px_24px_-16px_rgba(43,33,25,0.4)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-18px_rgba(43,33,25,0.55)]"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#1f1b19] shadow-[0_8px_24px_-16px_rgba(0,0,0,0.6)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.75)]"
     >
       <div className="aspect-[4/3] w-full overflow-hidden bg-linen">
         <img
@@ -55,7 +55,7 @@ export default function Treatments() {
   const highlights = TREATMENTS.filter((t) => (HIGHLIGHT_IDS as readonly string[]).includes(t.id));
 
   return (
-    <section id="behandlungen" className="relative overflow-hidden bg-white py-20 sm:py-28">
+    <section id="behandlungen" className="relative overflow-hidden bg-linen py-20 sm:py-28">
       {/* Hintergrund-Muster */}
       <div
         aria-hidden

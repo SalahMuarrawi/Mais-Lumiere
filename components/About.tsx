@@ -20,7 +20,7 @@ const VALUES = [
 
 export default function About() {
   return (
-    <section id="studio" className="bg-ink py-20 text-white sm:py-28">
+    <section id="studio" className="bg-[#0f0e0e] py-20 text-white sm:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:items-center">
         <div>
           <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-light">

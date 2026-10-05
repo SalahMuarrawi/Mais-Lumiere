@@ -69,7 +69,7 @@ export default function DatenschutzPage() {
               ))}
             </section>
           ))}
-          <p className="border-t border-linen-dark/60 pt-6 text-xs text-ink-soft/70">
+          <p className="border-t border-white/10 pt-6 text-xs text-ink-soft/70">
             Stand: Oktober {new Date().getFullYear()} – Diese Erklärung dient
             der Information und ist keine Rechtsberatung.
           </p>

@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #faf7f1;
-  --color-sand: #f2ebdf;
-  --color-linen: #efe6d8;
+  --color-cream: #0f0e0e;
+  --color-sand: #1a1817;
+  --color-linen: #141211;
   --color-gold: #b08d57;
-  --color-gold-dark: #91703f;
-  --color-ink: #2b2622;
+  --color-gold-dark: #d4af37;
+  --color-ink: #e5e5e5;
   --color-ink-darker: #1f1a15;
   --color-ink-soft: #d4c9ba;
-  --color-mist: #7c7368;
+  --color-mist: #a19a92;
   --color-gold-light: #d8bd93;
 
   /* Schriftarten (Jost & Cormorant Garamond via <link> im Root Layout) */

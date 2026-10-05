@@ -24,13 +24,13 @@ const FEATURES = [
 
 export default function Hero() {
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-ink pb-20 pt-32 sm:pt-40">
+    <section id="top" className="relative isolate overflow-hidden bg-[#0f0e0e] pb-20 pt-32 sm:pt-40">
       <img
         src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=2000&q=80&auto=format&fit=crop"
         alt="Strahlende, gepflegte Haut"
         className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/80 via-ink/60 to-ink" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f0e0e]/95 via-[#0f0e0e]/75 to-[#141211]" />
 
       <motion.div
         initial="hidden"

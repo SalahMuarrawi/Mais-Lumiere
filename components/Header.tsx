@@ -16,7 +16,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0f0e0e]/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-20 sm:px-8">
         <Link href="/" className="group flex items-baseline gap-2">
           <span className="font-serif text-lg tracking-wide text-white sm:text-xl">
@@ -60,7 +60,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-white/10 bg-ink px-5 pb-6 pt-3 md:hidden">
+        <nav className="border-t border-white/10 bg-[#0f0e0e] px-5 pb-6 pt-3 md:hidden">
           <ul className="space-y-1">
             {NAV_LINKS.map((l) => (
               <li key={l.href}>

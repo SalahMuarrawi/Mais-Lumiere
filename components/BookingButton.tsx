@@ -12,9 +12,9 @@ const styles: Record<string, string> = {
   solid:
     "bg-gold text-white hover:bg-gold-dark shadow-[0_10px_30px_-10px_rgba(176,141,87,0.7)]",
   light:
-    "bg-white text-ink hover:bg-linen shadow-[0_10px_30px_-12px_rgba(0,0,0,0.35)]",
+    "bg-[#e5e5e5] text-[#0f0e0e] hover:bg-white shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)]",
   ghost:
-    "border border-white/60 text-white hover:bg-white hover:text-ink",
+    "border border-white/60 text-white hover:bg-white hover:text-[#0f0e0e]",
 };
 
 export default function BookingButton({
