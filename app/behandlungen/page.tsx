@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   SITE,
   TREATMENTS,
@@ -22,6 +23,11 @@ const TABS: { id: CategoryFilter; label: string }[] = [
 export default function BehandlungenPage() {
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("all");
   const [search, setSearch] = useState("");
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  const toggleTreatment = (id: string) => {
+    setExpandedId((prev) => (prev === id ? null : id));
+  };
 
   const filteredTreatments = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -82,14 +88,17 @@ export default function BehandlungenPage() {
             {filteredTreatments.map((t) => (
               <article
                 key={t.id}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 transition-colors hover:border-[#D4AF37]/50"
+                onClick={() => {
+                  if (t.description) toggleTreatment(t.id);
+                }}
+                className="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 transition-colors hover:border-[#D4AF37]/50"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-800/60">
                   <img
                     src={t.image}
-                    alt={`${t.name} – Bild folgt`}
+                    alt={t.name}
                     loading="lazy"
-                    className="h-full w-full object-cover opacity-70 transition-opacity group-hover:opacity-90"
+                    className="h-full w-full object-cover opacity-70 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-90"
                   />
                   <span className="absolute left-3 top-3 rounded-full bg-neutral-950/80 px-3 py-1 text-[10px] uppercase tracking-widest text-[#D4AF37]">
                     {TREATMENT_CATEGORIES[t.category]}
@@ -98,10 +107,42 @@ export default function BehandlungenPage() {
                 <div className="flex flex-1 flex-col gap-2 p-5">
                   <h2 className="font-serif text-lg font-semibold leading-snug text-white">{t.name}</h2>
                   <p className="text-sm font-medium text-[#D4AF37]">{t.price}</p>
+                  {t.description && (
+                    <>
+                      <button
+                        type="button"
+                        aria-expanded={expandedId === t.id}
+                        aria-controls={`treatment-details-${t.id}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleTreatment(t.id);
+                        }}
+                        className="mt-3 inline-flex cursor-pointer items-center gap-1 self-start text-xs tracking-wider text-amber-400 transition hover:text-amber-300"
+                      >
+                        {expandedId === t.id ? "Weniger Details ↑" : "Details & Info ↓"}
+                      </button>
+                      <AnimatePresence initial={false}>
+                        {expandedId === t.id && (
+                        <motion.div
+                          id={`treatment-details-${t.id}`}
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.25, ease: "easeInOut" }}
+                          onClick={(e) => e.stopPropagation()}
+                          className="mt-3 overflow-hidden border-t border-neutral-800 pt-3 text-xs leading-relaxed text-neutral-300"
+                        >
+                          <p>{t.description}</p>
+                        </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  )}
                   <a
                     href={SITE.bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                     className="mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-[#D4AF37]/60 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-[#D4AF37] transition-colors hover:bg-[#D4AF37] hover:text-neutral-950"
                   >
                     Termin buchen
