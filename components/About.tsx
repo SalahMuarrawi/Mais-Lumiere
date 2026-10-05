@@ -1,73 +1,93 @@
-import { SITE } from "@/lib/data";
+"use client";
 
-const VALUES = [
-  {
-    icon: "❀",
-    title: "Beratung mit Herz",
-    text: "Jede Behandlung beginnt mit einer persönlichen Analyse Ihrer Haut – ohne Druck, mit ehrlichen Empfehlungen.",
-  },
-  {
-    icon: "◈",
-    title: "Moderne Technologien",
-    text: "OxyGeneo, LED-Therapie und Microneedling – wir setzen auf geprüfte, effektive Methoden.",
-  },
-  {
-    icon: "✦",
-    title: "Ruhige Atmosphäre",
-    text: "Unser Studio in Graz ist bewusst klein gehalten: Zeit für Sie, keine Warteliste, keine Hektik.",
-  },
-];
+import Image from "next/image";
+import { SITE } from "@/lib/data";
 
 export default function About() {
   return (
-    <section id="studio" className="bg-[#0f0e0e] py-20 text-white sm:py-28">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:items-center">
-        <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-light">
-            Unser Studio
-          </p>
-          <h2 className="font-serif text-3xl sm:text-4xl">
-            Ein Ort für Ruhe, Pflege &amp; <em className="italic text-gold-light">Lumière</em>
-          </h2>
-          <p className="mt-6 leading-relaxed text-ink-soft">
-            {SITE.name} ist ein kleines, inhabergeführtes Kosmetikstudio im
-            Herzen von Graz. Wir verbinden moderne Behandlungsmethoden mit einer
-            persönlichen Pflegephilosophie: keine Standardpakete, sondern
-            Konzepte, die zu Ihrer Haut, Ihrem Typ und Ihrem Alltag passen.
-          </p>
-          <p className="mt-4 leading-relaxed text-ink-soft">
-            Ob OxyGeneo für den Sofort-Glow, eine intensive Gesichtsbehandlung
-            oder der perfekte Wimpern-Look – bei uns steht eines immer im
-            Mittelpunkt: Sie.
-          </p>
-          <p className="mt-8 text-sm text-ink-soft">
-            Instagram:{" "}
-            <a
-              href={SITE.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="text-gold-light transition-colors hover:text-white"
+    <section
+      id="studio"
+      className="py-24 bg-[#0f0e0e] text-[#e5e5e5] relative overflow-hidden"
+    >
+      {/* dezenter goldener Glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-32 right-[-6rem] h-[24rem] w-[24rem] rounded-full bg-[#d4af37]/[0.08] blur-3xl"
+      />
+
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
+        {/* B) Portrait – mobile oben, desktop rechts */}
+        <div className="lg:order-2">
+          <div className="relative mx-auto aspect-[3/4] w-full max-w-md overflow-hidden rounded-3xl border border-[#d4af37]/30 bg-[#141211] shadow-2xl">
+            {/* dezenter Platzhalter hinter dem Foto */}
+            <div
+              aria-hidden
+              className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-[#1b1815] via-[#161311] to-[#141211]"
             >
-              @{SITE.instagramName}
-            </a>
-          </p>
+              <span className="select-none text-6xl leading-none text-[#d4af37]/30">
+                ✦
+              </span>
+              <span className="font-serif text-lg italic tracking-wide text-[#d4af37]/40">
+                Mais Lumière Esthetic
+              </span>
+            </div>
+            <Image
+              src="/images/about-mais.jpg"
+              alt="Mais – Inhaberin Mais Lumière Esthetic"
+              fill
+              priority
+              className="relative z-10 object-cover"
+            />
+          </div>
         </div>
 
-        <div className="grid gap-5">
-          {VALUES.map((v) => (
-            <div
-              key={v.title}
-              className="flex gap-5 rounded-2xl border border-white/10 bg-white/[0.04] p-6"
+        {/* A) Text */}
+        <div className="lg:order-1">
+          <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-[#d4af37]/80">
+            ÜBER MICH & PHILOSOPHIE
+          </p>
+
+          <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+            My name is <span className="italic text-[#d4af37]">Mais</span>
+          </h2>
+
+          {/* feine goldene Akzentlinie */}
+          <div
+            aria-hidden
+            className="mt-6 h-px w-28 bg-gradient-to-r from-[#d4af37]/80 to-transparent"
+          />
+
+          <p className="mt-8 leading-[1.9] text-[#d5cabd]">
+            Willkommen bei Mais Lumière Esthetic – Ihrem exklusiven Kosmetik- und
+            Beauty-Studio im Herzen von Graz. Hier dreht sich alles um Ihre
+            Schönheit, Ihr Wohlbefinden und Ihre Ausstrahlung.
+          </p>
+          <p className="mt-5 leading-[1.9] text-[#d5cabd]">
+            Mein Ziel ist es, Ihre natürliche Schönheit mit professionellen
+            Behandlungen und modernsten Konzepten zum Strahlen zu bringen. In einer
+            ruhigen, stilvollen Atmosphäre genießen Sie eine persönliche Auszeit
+            vom Alltag – sanft, individuell und wirkungsvoll.
+          </p>
+          <p className="mt-5 leading-[1.9] text-[#d5cabd]">
+            Gönnen Sie sich eine Pause und erleben Sie Schönheit in neuem Licht!
+          </p>
+
+          {/* Standort-Badge */}
+          <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/25 bg-white/[0.04] px-4 py-2 text-sm tracking-wide text-[#e5e5e5]/90">
+            📍 Stubenberggasse 8/1, 8010 Graz
+          </div>
+
+          {/* dezenter Buchungs-Button */}
+          <div className="mt-8">
+            <a
+              href={SITE.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-[#d4af37]/60 bg-[#d4af37]/10 px-7 py-3 text-sm font-medium tracking-wide text-[#e8c96a] transition-colors duration-300 hover:bg-[#d4af37] hover:text-[#0f0e0e]"
             >
-              <span className="mt-1 text-2xl text-gold-light">{v.icon}</span>
-              <div>
-                <h3 className="font-serif text-lg">{v.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
-                  {v.text}
-                </p>
-              </div>
-            </div>
-          ))}
+              Termin bei Mais vereinbaren <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

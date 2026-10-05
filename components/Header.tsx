@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import BookingButton from "./BookingButton";
 import { SITE } from "@/lib/data";
 
 const NAV_LINKS = [
+  { href: "/", label: "Startseite" },
   { href: "/behandlungen", label: "Behandlungen" },
   { href: "/#studio", label: "Studio" },
   { href: "/#galerie", label: "Galerie" },
@@ -18,12 +20,18 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0f0e0e]/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-20 sm:px-8">
-        <Link href="/" className="group flex items-baseline gap-2">
-          <span className="font-serif text-lg tracking-wide text-white sm:text-xl">
-            Mais Lumière
-          </span>
-          <span className="text-[11px] uppercase tracking-[0.3em] text-gold-light">
-            Esthetic
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/images/logo.png"
+            alt="Mais Lumière Esthetic Logo"
+            width={56}
+            height={56}
+            className="h-11 md:h-14 w-auto object-contain rounded-full drop-shadow-md"
+            priority
+          />
+          <span className="font-serif text-xl md:text-2xl tracking-wider text-neutral-100 hidden sm:inline">
+            Mais Lumière{" "}
+            <span className="text-xs md:text-sm uppercase tracking-widest text-[#d4af37]">Esthetic</span>
           </span>
         </Link>
 

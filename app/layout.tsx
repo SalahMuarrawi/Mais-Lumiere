@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     "BB-Glow",
     "Wimpernverlängerung",
   ],
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     title: "Mais Lumière Esthetic | Kosmetikstudio in Graz",
     description:
