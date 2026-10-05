@@ -2,9 +2,10 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE } from "@/lib/data";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.mais-lumiere.at"),
+  metadataBase: new URL(SITE.website),
   title: {
     default: "Mais Lumière Esthetic | Kosmetikstudio in Graz",
     template: "%s | Mais Lumière Esthetic",

@@ -1,5 +1,4 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { Fragment } from "react";
 import { LEGAL, SITE } from "@/lib/data";
 
 export const metadata = {
@@ -10,7 +9,6 @@ export const metadata = {
 export default function ImpressumPage() {
   return (
     <div className="bg-linen">
-      <Header />
       <main className="mx-auto max-w-3xl px-5 pb-24 pt-32 sm:px-8 sm:pt-40">
         <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-dark">
           Rechtliches
@@ -21,7 +19,9 @@ export default function ImpressumPage() {
           <div>
             <h2 className="font-serif text-lg text-ink">Anbieter</h2>
             <p className="mt-2">
-              {SITE.name}
+              {LEGAL.imprint.operator}
+              <br />
+              Inhaberin / Geschäftsführung: {SITE.imprint.owner}
               <br />
               {SITE.address.street}
               <br />
@@ -32,36 +32,52 @@ export default function ImpressumPage() {
           <div>
             <h2 className="font-serif text-lg text-ink">Kontakt</h2>
             <p className="mt-2">
-              Telefon:{" "}
-              <a href={SITE.phoneHref} className="underline">
-                {SITE.phone}
-              </a>
-              <br />
-              E-Mail:{" "}
-              <a href={`mailto:${SITE.email}`} className="underline">
-                {SITE.email}
-              </a>
+              {LEGAL.imprint.contact.map((c, i) => (
+                <Fragment key={c.label}>
+                  {i > 0 && <br />}
+                  {c.label}:{" "}
+                  <a
+                    href={c.href}
+                    {...(c.href.startsWith("http")
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                    className="underline"
+                  >
+                    {c.value}
+                  </a>
+                </Fragment>
+              ))}
             </p>
           </div>
 
           <div>
             <h2 className="font-serif text-lg text-ink">Unternehmensdetails</h2>
             <p className="mt-2">
-              {LEGAL.imprint.operator}
-              <br />
-              {LEGAL.imprint.uid}
-              <br />
-              Gewerbe: {LEGAL.imprint.trade}
+              UID-Nummer: {LEGAL.imprint.uid}
               <br />
               {LEGAL.imprint.regNote}
+              <br />
+              Gewerbebezeichnung: {LEGAL.imprint.trade}
+              <br />
+              Unternehmensgegenstand: {LEGAL.imprint.purpose}
             </p>
           </div>
 
           <div>
-            <h2 className="font-serif text-lg text-ink">
-              Zuständige Aufsichtsbehörde
-            </h2>
-            <p className="mt-2">{LEGAL.imprint.supervision}</p>
+            <h2 className="font-serif text-lg text-ink">Zuständige Behörde</h2>
+            <p className="mt-2">
+              Gewerbebehörde: {LEGAL.imprint.supervision}
+              <br />
+              Berufsrechtliche Vorschriften:{" "}
+              <a
+                href={SITE.imprint.professionalRulesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                www.ris.bka.gv.at
+              </a>
+            </p>
           </div>
 
           <div>
@@ -77,7 +93,6 @@ export default function ImpressumPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

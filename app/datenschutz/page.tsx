@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import { LEGAL, SITE } from "@/lib/data";
 
 export const metadata = {
@@ -48,7 +46,6 @@ const SECTIONS = [
 export default function DatenschutzPage() {
   return (
     <div className="bg-linen">
-      <Header />
       <main className="mx-auto max-w-3xl px-5 pb-24 pt-32 sm:px-8 sm:pt-40">
         <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-dark">
           Rechtliches
@@ -75,7 +72,6 @@ export default function DatenschutzPage() {
           </p>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

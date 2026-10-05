@@ -1,3 +1,4 @@
+import { SITE } from "@/lib/data";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Gallery from "@/components/Gallery";
@@ -12,7 +13,7 @@ export const metadata = {
     "Kosmetikstudio in Graz (Stubenberggasse 8/1): Gesichtsbehandlungen, OxyGeneo, Microneedling, Wimpernverlängerung & Brow Design. Online Termin buchen über Treatwell.",
   keywords:
     "Kosmetik Graz, Kosmetikstudio Graz, Gesichtsbehandlung Graz, OxyGeneo Graz, Wimpernverlängerung Graz, Microneedling Graz, Mais Lumière Esthetic",
-  alternates: { canonical: "https://www.mais-lumiere.at" },
+  alternates: { canonical: SITE.website },
   openGraph: {
     title: "Mais Lumière Esthetic – Kosmetik & Beauty Graz",
     description:

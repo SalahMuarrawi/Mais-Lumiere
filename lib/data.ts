@@ -11,6 +11,7 @@ export const SITE = {
   phone: "+43 664 5732892",
   phoneHref: "tel:+436645732892",
   email: "maislumiere@gmail.com",
+  website: "https://www.mais-lumiere.at",
   /** Treatwell-Buchungslink – gilt für ALLE Buchungs-Buttons */
   bookingUrl:
     "https://buchung.treatwell.at/ort/mais-lumiere-esthetic-e-u/?utm_source=widget&utm_medium=partners&utm_campaign=website_sharing",
@@ -21,17 +22,17 @@ export const SITE = {
     "https://www.google.com/maps/search/?api=1&query=Stubenberggasse%208%2F1%2C%208010%20Graz",
   hours: "Ausschließlich nach Terminvereinbarung",
   imprint: {
-    operator: "Mais Lumière Esthetic (Einzelunternehmen)",
-    owner: "Mais Lumière Esthetic",
-    regNote:
-      "Einzelunternehmen, Österreich. Handelsregister- und Firmenbuchnummer auf Anfrage – bitte vor Veröffentlichung prüfen und ergänzen.",
-    uid: "UID-Nummer auf Anfrage – bitte vor Veröffentlichung prüfen und ergänzen.",
-    trade:
-      "Kosmetik und Schönheitspflege – Gewerbeanmeldung bitte vor Veröffentlichung prüfen und ergänzen.",
-    supervision:
-      "Zuständige Aufsichtsbehörde bitte vor Veröffentlichung prüfen und ergänzen.",
+    /** Registrierte Firmenbezeichnung (GISA) */
+    operator: "Mais Lumiere Esthetic e.U.",
+    owner: "Mais Abou Dan",
+    regNote: "GISA-Zahl: 39027894",
+    uid: "ATU 82945903",
+    trade: "Kosmetik (Schönheitspflege), ausgenommen Piercen und Tätowieren",
+    purpose: "Beauty, Kosmetik, Schönheitspflege",
+    supervision: "Bezirkshauptmannschaft Graz",
+    professionalRulesUrl: "https://www.ris.bka.gv.at",
     dispute:
-      "Angaben zur Verbraucherstreitbeilegung bitte vor Veröffentlichung prüfen und ergänzen.",
+      "Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir weder bereit noch verpflichtet.",
   },
 };
 
@@ -82,14 +83,14 @@ export const TREATMENTS: Treatment[] = [
     name: "Klassische Gesichtsbehandlung",
     price: "90,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/37273224/pexels-photo-37273224.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.pexels.com/photos/6663374/pexels-photo-6663374.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     id: "deep-cleansing-akne-gesicht",
     name: "Deep Cleansing Akne-Behandlung Gesicht",
     price: "125,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/5069588/pexels-photo-5069588.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.pexels.com/photos/39589551/pexels-photo-39589551.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     id: "deep-cleansing-akne-koerper",
@@ -103,7 +104,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Mais Luxe Facial Gesichtsreinigung",
     price: "150,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/5042636/pexels-photo-5042636.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.pexels.com/photos/12556701/pexels-photo-12556701.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     id: "korean-glass-skin-facial",
@@ -117,7 +118,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Enzyme Facial",
     price: "75,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/32646004/pexels-photo-32646004.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.pexels.com/photos/22589363/pexels-photo-22589363.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     id: "fruchtsaeure-peeling-gesicht",
@@ -131,7 +132,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Fruchtsäure Peeling Körper",
     price: "120,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/3738375/pexels-photo-3738375.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.pexels.com/photos/6731460/pexels-photo-6731460.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     id: "algen-peeling-gesicht",
@@ -512,12 +513,14 @@ export const LEGAL = {
     contact: [
       { label: "Telefon", value: SITE.phone, href: SITE.phoneHref },
       { label: "E-Mail", value: SITE.email, href: `mailto:${SITE.email}` },
-      { label: "Web", value: "www.mais-lumiere.at", href: "https://www.mais-lumiere.at" },
+      { label: "Web", value: SITE.website.replace(/^https?:\/\//, ""), href: SITE.website },
     ],
     regNote: SITE.imprint.regNote,
     uid: SITE.imprint.uid,
     trade: SITE.imprint.trade,
+    purpose: SITE.imprint.purpose,
     supervision: SITE.imprint.supervision,
+    professionalRulesUrl: SITE.imprint.professionalRulesUrl,
     dispute: SITE.imprint.dispute,
   },
   privacy: {
