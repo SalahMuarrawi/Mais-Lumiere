@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import BookingButton from "./BookingButton";
 import { SITE } from "@/lib/data";
+import { useLanguage } from "@/lib/i18n";
 
 const FEATURES = [
   {
@@ -23,11 +24,13 @@ const FEATURES = [
 ];
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section id="top" className="relative isolate overflow-hidden bg-[#0f0e0e] pb-20 pt-32 sm:pt-40">
       <img
         src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=2000&q=80&auto=format&fit=crop"
-        alt="Strahlende, gepflegte Haut"
+        alt={t("Strahlende, gepflegte Haut")}
         className="absolute inset-0 -z-10 h-full w-full object-cover opacity-60"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f0e0e]/85 via-[#0f0e0e]/40 to-[#141211]" />
@@ -56,9 +59,9 @@ export default function Hero() {
           }}
           className="max-w-3xl font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl"
         >
-          Die Essenz von{" "}
-          <em className="italic text-gold-light">refinierter</em> Schönheit –
-          mitten in Graz.
+          {t("Die Essenz von")}{" "}
+          <em className="italic text-gold-light">{t("refinierter")}</em>
+          {t(" Schönheit – mitten in Graz.")}
         </motion.h1>
 
         <motion.p
@@ -68,9 +71,7 @@ export default function Hero() {
           }}
           className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg"
         >
-          Willkommen bei {SITE.name} – Ihrem Kosmetikstudio für Gesichtspflege,
-          OxyGeneo und Wimpern-Design. Entspannen Sie sich in ruhiger
-          Atmosphäre und lassen Sie Ihre Haut neu strahlen.
+          {t("Willkommen bei Mais Lumière Esthetic – Ihrem Kosmetikstudio für Gesichtspflege, OxyGeneo und Wimpern-Design. Entspannen Sie sich in ruhiger Atmosphäre und lassen Sie Ihre Haut neu strahlen.")}
         </motion.p>
 
         <motion.div
@@ -100,9 +101,9 @@ export default function Hero() {
             <div key={f.title} className="flex gap-4">
               <span className="mt-1 text-xl text-gold-light">{f.icon}</span>
               <div>
-                <h3 className="font-serif text-base text-white">{f.title}</h3>
+                <h3 className="font-serif text-base text-white">{t(f.title)}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-ink-soft">
-                  {f.text}
+                  {t(f.text)}
                 </p>
               </div>
             </div>

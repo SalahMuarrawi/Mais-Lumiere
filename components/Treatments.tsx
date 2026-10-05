@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { TREATMENTS, TREATMENT_CATEGORIES } from "@/lib/data";
 import type { Treatment } from "@/lib/data";
+import { useLanguage, translatedTreatment } from "@/lib/i18n";
 
 const HIGHLIGHT_IDS = [
   "oxygeneo-glow-facial",
@@ -13,6 +14,9 @@ const HIGHLIGHT_IDS = [
 ] as const;
 
 function TreatmentCard({ treatment, index }: { treatment: Treatment; index: number }) {
+  const { language, t } = useLanguage();
+  const localized = translatedTreatment(treatment.id, language, treatment.name, treatment.description);
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 28 }}
@@ -24,27 +28,27 @@ function TreatmentCard({ treatment, index }: { treatment: Treatment; index: numb
       <div className="aspect-[4/3] w-full overflow-hidden bg-linen">
         <img
           src={treatment.image}
-          alt={treatment.name}
+          alt={localized.name}
           loading="lazy"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="font-serif text-lg leading-snug text-ink">{treatment.name}</h3>
+          <h3 className="font-serif text-lg leading-snug text-ink">{localized.name}</h3>
           <p className="mt-0.5 whitespace-nowrap font-medium tracking-wide text-gold-dark">
             {treatment.price}
           </p>
         </div>
         <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-ink-soft/70">
-          {TREATMENT_CATEGORIES[treatment.category]}
+          {t(TREATMENT_CATEGORIES[treatment.category])}
         </p>
         <Link
           href="/behandlungen"
-          aria-label={`Mehr über ${treatment.name}`}
+          aria-label={`${t("Mehr erfahren")}: ${localized.name}`}
           className="mt-auto inline-flex items-center gap-2 pt-4 text-xs uppercase tracking-[0.2em] text-gold-dark transition-colors hover:text-gold"
         >
-          Mehr erfahren <span aria-hidden>→</span>
+          {t("Mehr erfahren")} <span aria-hidden>→</span>
         </Link>
       </div>
     </motion.article>
@@ -52,6 +56,7 @@ function TreatmentCard({ treatment, index }: { treatment: Treatment; index: numb
 }
 
 export default function Treatments() {
+  const { t } = useLanguage();
   const highlights = TREATMENTS.filter((t) => (HIGHLIGHT_IDS as readonly string[]).includes(t.id));
 
   return (
@@ -77,15 +82,13 @@ export default function Treatments() {
           className="max-w-2xl"
         >
           <p className="mb-4 text-xs uppercase tracking-[0.35em] text-gold-dark">
-            Ausgewählte Highlights
+            {t("Ausgewählte Highlights")}
           </p>
           <h2 className="font-serif text-4xl leading-tight text-ink sm:text-5xl">
-            Unsere Signature-Behandlungen
+            {t("Unsere Signature-Behandlungen")}
           </h2>
           <p className="mt-6 font-light leading-relaxed text-ink-soft">
-            Vier Favoriten aus unserer Karte – vom OxyGeneo® Glow Facial bis zum Luxus Brow &amp; Lash
-            Lifting. Entdecken Sie alle {TREATMENTS.length} Behandlungen in unserem vollständigen
-            Leistungskatalog.
+            {t("Vier Favoriten aus unserer Karte – vom OxyGeneo® Glow Facial bis zum Luxus Brow & Lash Lifting. Entdecken Sie alle")} {TREATMENTS.length} {t("Behandlungen in unserem vollständigen Leistungskatalog.")}
           </p>
         </motion.header>
 
@@ -108,7 +111,7 @@ export default function Treatments() {
             href="/behandlungen"
             className="group inline-flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-gold-dark transition-colors hover:text-gold"
           >
-            Alle {TREATMENTS.length} Behandlungen ansehen
+            {t("Alle Behandlungen ansehen")} ({TREATMENTS.length})
             <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </motion.div>

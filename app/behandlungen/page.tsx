@@ -9,6 +9,7 @@ import {
   TREATMENT_CATEGORY_ORDER,
 } from "@/lib/data";
 import type { TreatmentCategory } from "@/lib/data";
+import { translatedTreatment, useLanguage } from "@/lib/i18n";
 
 type CategoryFilter = TreatmentCategory | "all";
 
@@ -24,6 +25,7 @@ export default function BehandlungenPage() {
   const [activeCategory, setActiveCategory] = useState<CategoryFilter>("all");
   const [search, setSearch] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const { language, t: translate } = useLanguage();
 
   const toggleTreatment = (id: string) => {
     setExpandedId((prev) => (prev === id ? null : id));
@@ -33,19 +35,23 @@ export default function BehandlungenPage() {
     const q = search.trim().toLowerCase();
     return TREATMENTS.filter((t) => {
       const matchesCategory = activeCategory === "all" || t.category === activeCategory;
-      const matchesSearch = q.length === 0 || t.name.toLowerCase().includes(q);
+      const name = translatedTreatment(t.id, language, t.name, t.description).name;
+      const matchesSearch =
+        q.length === 0 ||
+        t.name.toLowerCase().includes(q) ||
+        name.toLowerCase().includes(q);
       return matchesCategory && matchesSearch;
     });
-  }, [activeCategory, search]);
+  }, [activeCategory, language, search]);
 
   return (
     <main className="min-h-screen bg-[#0F0E0E] text-neutral-200 antialiased">
       <div className="mx-auto max-w-6xl px-5 pb-16 pt-28 sm:px-8 sm:pt-32 lg:pb-24">
         <header className="mb-10 sm:mb-14">
           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">{SITE.name} · {SITE.city}</p>
-          <h1 className="mt-4 font-serif text-4xl font-bold text-white sm:text-5xl">Unsere Behandlungen</h1>
+          <h1 className="mt-4 font-serif text-4xl font-bold text-white sm:text-5xl">{translate("Unsere Behandlungen")}</h1>
           <p className="mt-5 max-w-2xl leading-relaxed text-neutral-200/70">
-            Von der klassischen Gesichtsbehandlung bis zur apparativen Anwendung – entdecken Sie unser Leistungsspektrum und vereinbaren Sie Ihren Wunschtermin.
+            {translate("Von der klassischen Gesichtsbehandlung bis zur apparativen Anwendung – entdecken Sie unser Leistungsspektrum und vereinbaren Sie Ihren Wunschtermin.")}
           </p>
         </header>
 
@@ -55,37 +61,42 @@ export default function BehandlungenPage() {
             type="search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Behandlung suchen…"
-            aria-label="Behandlungen durchsuchen"
+            placeholder={translate("Behandlung suchen…")}
+            aria-label={translate("Behandlungen durchsuchen")}
             className="w-full rounded-full border border-neutral-800 bg-neutral-900/60 py-3 pl-11 pr-4 text-sm text-white outline-none transition-colors placeholder:text-neutral-500 focus:border-[#D4AF37]"
           />
         </div>
 
         <div className="mb-8 flex flex-wrap gap-2" role="tablist" aria-label="Behandlungskategorien">
-          {TABS.map((t) => (
+          {TABS.map((tab) => (
             <button
-              key={t.id}
+              key={tab.id}
               type="button"
-              onClick={() => setActiveCategory(t.id)}
-              aria-pressed={activeCategory === t.id}
+              onClick={() => setActiveCategory(tab.id)}
+              aria-pressed={activeCategory === tab.id}
               className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors ${
-                activeCategory === t.id
+                activeCategory === tab.id
                   ? "border-[#D4AF37] bg-[#D4AF37]/10 text-[#D4AF37]"
                   : "border-neutral-800 bg-neutral-900/60 text-neutral-300 hover:border-[#D4AF37]/50 hover:text-white"
               }`}
             >
-              {t.label}
+              {tab.label === "Alle" ? translate("Alle") : translate(tab.label)}
             </button>
           ))}
         </div>
 
         <p className="mb-6 text-xs uppercase tracking-widest text-neutral-500">
-          {filteredTreatments.length} {filteredTreatments.length === 1 ? "Behandlung" : "Behandlungen"}
+          {filteredTreatments.length}{" "}
+          {language === "de"
+            ? filteredTreatments.length === 1 ? "Behandlung" : "Behandlungen"
+            : translate(filteredTreatments.length === 1 ? "treatment-count-one" : "treatment-count-many")}
         </p>
 
         {filteredTreatments.length > 0 ? (
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {filteredTreatments.map((t) => (
+            {filteredTreatments.map((t) => {
+              const localized = translatedTreatment(t.id, language, t.name, t.description);
+              return (
               <article
                 key={t.id}
                 onClick={() => {
@@ -96,16 +107,16 @@ export default function BehandlungenPage() {
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-800/60">
                   <img
                     src={t.image}
-                    alt={t.name}
+                    alt={localized.name}
                     loading="lazy"
                     className="h-full w-full object-cover opacity-70 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-90"
                   />
                   <span className="absolute left-3 top-3 rounded-full bg-neutral-950/80 px-3 py-1 text-[10px] uppercase tracking-widest text-[#D4AF37]">
-                    {TREATMENT_CATEGORIES[t.category]}
+                    {translate(TREATMENT_CATEGORIES[t.category])}
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col gap-2 p-5">
-                  <h2 className="font-serif text-lg font-semibold leading-snug text-white">{t.name}</h2>
+                  <h2 className="font-serif text-lg font-semibold leading-snug text-white">{localized.name}</h2>
                   <p className="text-sm font-medium text-[#D4AF37]">{t.price}</p>
                   {t.description && (
                     <>
@@ -119,7 +130,7 @@ export default function BehandlungenPage() {
                         }}
                         className="mt-3 inline-flex cursor-pointer items-center gap-1 self-start text-xs tracking-wider text-amber-400 transition hover:text-amber-300"
                       >
-                        {expandedId === t.id ? "Weniger Details ↑" : "Details & Info ↓"}
+                        {translate(expandedId === t.id ? "Weniger Details ↑" : "Details & Info ↓")}
                       </button>
                       <AnimatePresence initial={false}>
                         {expandedId === t.id && (
@@ -132,7 +143,7 @@ export default function BehandlungenPage() {
                           onClick={(e) => e.stopPropagation()}
                           className="mt-3 overflow-hidden border-t border-neutral-800 pt-3 text-xs leading-relaxed text-neutral-300"
                         >
-                          <p>{t.description}</p>
+                          <p>{localized.description}</p>
                         </motion.div>
                         )}
                       </AnimatePresence>
@@ -150,12 +161,13 @@ export default function BehandlungenPage() {
                   </a>
                 </div>
               </article>
-            ))}
+              );
+            })}
           </div>
         ) : (
           <div className="rounded-2xl border border-dashed border-neutral-800 bg-neutral-900/40 p-12 text-center">
-            <p className="text-lg font-medium text-white">Keine Behandlung gefunden</p>
-            <p className="mt-2 text-sm text-neutral-400">Passen Sie Ihre Suche an oder wählen Sie eine andere Kategorie.</p>
+            <p className="text-lg font-medium text-white">{translate("Keine Behandlung gefunden")}</p>
+            <p className="mt-2 text-sm text-neutral-400">{translate("Passen Sie Ihre Suche an oder wählen Sie eine andere Kategorie.")}</p>
           </div>
         )}
       </div>

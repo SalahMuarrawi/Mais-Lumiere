@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { SITE } from "@/lib/data";
+import { useLanguage } from "@/lib/i18n";
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="studio"
@@ -33,7 +36,7 @@ export default function About() {
             </div>
             <Image
               src="/images/about-mais.jpg"
-              alt="Mais – Inhaberin Mais Lumière Esthetic"
+              alt={t("Mais – Inhaberin Mais Lumière Esthetic")}
               fill
               priority
               className="relative z-10 object-cover"
@@ -44,11 +47,11 @@ export default function About() {
         {/* A) Text */}
         <div className="lg:order-1">
           <p className="text-[11px] font-medium uppercase tracking-[0.35em] text-[#d4af37]/80">
-            ÜBER MICH & PHILOSOPHIE
+            {t("ÜBER MICH & PHILOSOPHIE")}
           </p>
 
           <h2 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
-            My name is <span className="italic text-[#d4af37]">Mais</span>
+            {t("My name is ")}<span className="italic text-[#d4af37]">Mais</span>
           </h2>
 
           {/* feine goldene Akzentlinie */}
@@ -58,18 +61,13 @@ export default function About() {
           />
 
           <p className="mt-8 leading-[1.9] text-[#d5cabd]">
-            Willkommen bei Mais Lumière Esthetic – Ihrem exklusiven Kosmetik- und
-            Beauty-Studio im Herzen von Graz. Hier dreht sich alles um Ihre
-            Schönheit, Ihr Wohlbefinden und Ihre Ausstrahlung.
+            {t("Willkommen bei Mais Lumière Esthetic – Ihrem exklusiven Kosmetik- und Beauty-Studio im Herzen von Graz. Hier dreht sich alles um Ihre Schönheit, Ihr Wohlbefinden und Ihre Ausstrahlung.")}
           </p>
           <p className="mt-5 leading-[1.9] text-[#d5cabd]">
-            Mein Ziel ist es, Ihre natürliche Schönheit mit professionellen
-            Behandlungen und modernsten Konzepten zum Strahlen zu bringen. In einer
-            ruhigen, stilvollen Atmosphäre genießen Sie eine persönliche Auszeit
-            vom Alltag – sanft, individuell und wirkungsvoll.
+            {t("Mein Ziel ist es, Ihre natürliche Schönheit mit professionellen Behandlungen und modernsten Konzepten zum Strahlen zu bringen. In einer ruhigen, stilvollen Atmosphäre genießen Sie eine persönliche Auszeit vom Alltag – sanft, individuell und wirkungsvoll.")}
           </p>
           <p className="mt-5 leading-[1.9] text-[#d5cabd]">
-            Gönnen Sie sich eine Pause und erleben Sie Schönheit in neuem Licht!
+            {t("Gönnen Sie sich eine Pause und erleben Sie Schönheit in neuem Licht!")}
           </p>
 
           {/* Standort-Badge */}
@@ -85,7 +83,7 @@ export default function About() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-[#d4af37]/60 bg-[#d4af37]/10 px-7 py-3 text-sm font-medium tracking-wide text-[#e8c96a] transition-colors duration-300 hover:bg-[#d4af37] hover:text-[#0f0e0e]"
             >
-              Termin bei Mais vereinbaren <span aria-hidden>→</span>
+              {t("Termin bei Mais vereinbaren")} <span aria-hidden>→</span>
             </a>
           </div>
         </div>

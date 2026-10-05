@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { SITE } from "@/lib/data";
+import { useLanguage } from "@/lib/i18n";
 
 type BookingButtonProps = {
   variant?: "solid" | "light" | "ghost";
@@ -20,9 +23,10 @@ const styles: Record<string, string> = {
 export default function BookingButton({
   variant = "solid",
   size = "md",
-  label = "Termin buchen",
+  label,
   className = "",
 }: BookingButtonProps) {
+  const { t } = useLanguage();
   const sizeClasses =
     size === "lg"
       ? "px-8 py-4 text-base tracking-[0.18em]"
@@ -35,7 +39,7 @@ export default function BookingButton({
       rel="noopener noreferrer"
       className={`inline-flex items-center justify-center gap-2 rounded-full font-medium uppercase transition-colors duration-300 ${sizeClasses} ${styles[variant]} ${className}`}
     >
-      {label}
+      {t(label ?? "Termin buchen")}
       <span aria-hidden className="text-base leading-none">
         →
       </span>
@@ -44,9 +48,10 @@ export default function BookingButton({
 }
 
 export function BookingLink({ className = "" }: { className?: string }) {
+  const { t } = useLanguage();
   return (
     <Link href={SITE.bookingUrl} className={className} target="_blank" rel="noopener noreferrer">
-      Termin buchen
+      {t("Termin buchen")}
     </Link>
   );
 }

@@ -1,20 +1,24 @@
+"use client";
+
 import { GALLERY, SITE } from "@/lib/data";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Gallery() {
+  const { t } = useLanguage();
+
   return (
     <section id="galerie" className="bg-linen py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-xl">
             <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-dark">
-              Galerie
+              {t("Galerie")}
             </p>
             <h2 className="font-serif text-3xl text-ink sm:text-4xl">
-              Einblicke in unser Studio
+              {t("Einblicke in unser Studio")}
             </h2>
             <p className="mt-3 text-sm text-ink-soft">
-              Impressionen unserer Behandlungen und Produkte – echte Momente aus
-              dem Alltag im Studio.
+              {t("Impressionen unserer Behandlungen und Produkte – echte Momente aus dem Alltag im Studio.")}
             </p>
           </div>
           <a
@@ -23,7 +27,7 @@ export default function Gallery() {
             rel="noreferrer"
             className="whitespace-nowrap text-sm text-gold-dark underline underline-offset-4 transition-colors hover:text-ink"
           >
-            Mehr auf Instagram →
+            {t("Mehr auf Instagram →")}
           </a>
         </div>
 
@@ -33,7 +37,7 @@ export default function Gallery() {
             <img
               key={img.src}
               src={img.src}
-              alt={img.alt}
+              alt={t(img.alt)}
               loading="lazy"
               className={`h-48 w-full rounded-xl object-cover sm:h-64 ${
                 i % 3 === 1 ? "sm:translate-y-6" : ""

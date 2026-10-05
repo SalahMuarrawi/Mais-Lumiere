@@ -1,11 +1,16 @@
+"use client";
+
 import { TESTIMONIALS } from "@/lib/data";
+import { useLanguage } from "@/lib/i18n";
 
 export default function Testimonials() {
+  const { t: translate } = useLanguage();
+
   return (
     <section className="bg-linen pb-20 sm:pb-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <p className="mb-10 text-center text-xs uppercase tracking-[0.35em] text-gold-dark">
-          Das sagen unsere Kundinnen
+          {translate("Das sagen unsere Kundinnen")}
         </p>
         <div className="grid gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (
@@ -17,7 +22,7 @@ export default function Testimonials() {
                 ★★★★★
               </div>
               <blockquote className="flex-1 text-sm leading-relaxed text-ink">
-                „{t.text}“
+                „{translate(t.text)}“
               </blockquote>
               <figcaption className="mt-5 text-xs uppercase tracking-widest text-ink-soft/70">
                 {t.name}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BookingButton from "./BookingButton";
 import { SITE } from "@/lib/data";
+import { LanguageSwitcher, useLanguage } from "@/lib/i18n";
 
 const NAV_LINKS = [
   { href: "/", label: "Startseite" },
@@ -16,6 +17,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0f0e0e]/90 backdrop-blur-md">
@@ -35,22 +37,25 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-5 lg:gap-8 md:flex">
           {NAV_LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               className="text-sm text-ink-soft transition-colors hover:text-gold-light"
             >
-              {l.label}
+              {t(l.label)}
             </Link>
           ))}
+          <LanguageSwitcher />
           <BookingButton className="!px-5 !py-2.5" />
         </nav>
 
+        <LanguageSwitcher className="md:hidden" />
+
         <button
           type="button"
-          aria-label={open ? "Menü schließen" : "Menü öffnen"}
+          aria-label={t(open ? "Menü schließen" : "Menü öffnen")}
           onClick={() => setOpen((v) => !v)}
           className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
         >
@@ -77,7 +82,7 @@ export default function Header() {
                   onClick={() => setOpen(false)}
                   className="block py-2.5 text-sm text-ink-soft transition-colors hover:text-gold-light"
                 >
-                  {l.label}
+                  {t(l.label)}
                 </Link>
               </li>
             ))}
