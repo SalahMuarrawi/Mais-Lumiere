@@ -10,6 +10,7 @@ const UI_TRANSLATIONS: Record<string, Record<Exclude<Language, "de">, string>> =
   "Studio": { en: "Studio", ar: "الاستوديو" },
   "Galerie": { en: "Gallery", ar: "معرض الصور" },
   "Kontakt": { en: "Contact", ar: "اتصل بنا" },
+  "Social Media": { en: "Social media", ar: "وسائل التواصل الاجتماعي" },
   "Kontakt & Anfahrt": { en: "Contact & Directions", ar: "التواصل والوصول" },
   "Termin buchen": { en: "Book an appointment", ar: "احجزي موعداً" },
   "Jetzt Termin buchen": { en: "Book an appointment", ar: "احجزي موعداً" },

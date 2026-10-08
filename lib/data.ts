@@ -18,6 +18,23 @@ export const SITE = {
   instagramName: "@mais_lumiere_esthetic",
   instagram:
     "https://www.instagram.com/mais_lumiere_esthetic?utm_source=qr",
+  socialMedia: [
+    {
+      name: "Instagram",
+      handle: "@mais_lumiere_esthetic",
+      url: "https://www.instagram.com/mais_lumiere_esthetic?utm_source=qr",
+    },
+    {
+      name: "TikTok",
+      handle: "@mais.lumiere.esthetic",
+      url: "https://www.tiktok.com/@mais.lumiere.esthetic",
+    },
+    {
+      name: "Facebook",
+      handle: "Mais Lumière Esthetic",
+      url: "https://www.facebook.com/Maislumiereesthetic/",
+    },
+  ],
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Stubenberggasse%208%2F1%2C%208010%20Graz",
   hours: "Ausschließlich nach Terminvereinbarung",

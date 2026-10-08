@@ -35,7 +35,7 @@ export default function Footer() {
 
       <footer className="border-t border-white/10 bg-ink-darker text-ink-soft">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
-        <div className="grid gap-10 md:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-5">
           {/* Brand */}
           <div className="md:col-span-2">
             <p className="font-serif text-xl text-white">
@@ -74,16 +74,28 @@ export default function Footer() {
                   {SITE.email}
                 </a>
               </li>
-              <li>
-                <a
-                  href={SITE.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="transition-colors hover:text-gold-light"
-                >
-                  {SITE.instagramName}
-                </a>
-              </li>
+            </ul>
+          </div>
+
+          {/* Social Media */}
+          <div>
+            <h3 className="mb-3 text-xs uppercase tracking-[0.3em] text-gold-light/80">
+              {t("Social Media")}
+            </h3>
+            <ul className="space-y-2 text-sm">
+              {SITE.socialMedia.map((channel) => (
+                <li key={channel.name}>
+                  <a
+                    href={channel.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-gold-light"
+                  >
+                    {channel.name}
+                    <span className="ml-2 text-ink-soft/70">{channel.handle}</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

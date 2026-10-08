@@ -62,14 +62,23 @@ export default function Contact() {
             </div>
 
             <div>
-              <a
-                href={SITE.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm text-ink-soft transition-colors hover:text-gold-light"
-              >
-                {t("Instagram:")} {SITE.instagramName}
-              </a>
+              <h3 className="mb-3 text-xs uppercase tracking-[0.3em] text-gold-light/80">
+                {t("Social Media")}
+              </h3>
+              <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                {SITE.socialMedia.map((channel) => (
+                  <li key={channel.name}>
+                    <a
+                      href={channel.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ink-soft transition-colors hover:text-gold-light"
+                    >
+                      {channel.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
