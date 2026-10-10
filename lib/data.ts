@@ -522,19 +522,19 @@ export const TREATMENTS: Treatment[] = [
 export const GALLERY = [
   {
     alt: "Saubere, strahlende Haut nach einer Gesichtsbehandlung",
-    src: "/images/IMG_0927.HEIC",
+    src: "/images/IMG_0927.jpeg",
   },
   {
     alt: "Pflegeprodukte und Seren in einer ruhigen Komposition",
-    src: "/images/IMG_0924.HEIC",
+    src: "/images/IMG_0924.jpeg",
   },
   {
     alt: "Beruhigende Massagebehandlung mit cremiger Textur",
-    src: "/images/IMG_1718.HEIC",
+    src: "/images/IMG_1718.jpeg",
   },
   {
     alt: "Frau mit glatter, gesunder Haut im Studio-Licht",
-    src: "/images/IMG_0983.HEIC",
+    src: "/images/IMG_0983.jpeg",
   },
   {
     alt: "Aromatherapie und Entspannung im Kosmetikstudio",

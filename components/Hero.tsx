@@ -8,8 +8,8 @@ import { useLanguage } from "@/lib/i18n";
 const FEATURES = [
   {
     icon: "✦",
-    title: "OxyGeneo®",
-    text: "Sofort-Lift in 30 Minuten – Sauerstoff, Peeling & LED.",
+    title: "Hydrafacial",
+    text: "Porentiefe Reinigung, sanftes Peeling und intensive Feuchtigkeits-Infusion für einen sofort strahlenden Glow ganz ohne Ausfallzeit.",
   },
   {
     icon: "❀",
