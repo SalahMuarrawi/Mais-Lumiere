@@ -166,7 +166,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Algen Peeling Gesicht",
     price: "110,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/14187891/pexels-photo-14187891.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/14996838/pexels-photo-14996838.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "100 % natürliche Mikronadeln aus Algen kurbeln die Zellerneuerung und Hautverjüngung intensiv an."
   },
   {
@@ -174,7 +174,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Algen Peeling Körper",
     price: "160,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/8842699/pexels-photo-8842699.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/10976267/pexels-photo-10976267.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Natürliche Tiefenregeneration gegen Hyperpigmentierung, Dehnungsstreifen und Unebenheiten."
   },
   {
@@ -190,7 +190,7 @@ export const TREATMENTS: Treatment[] = [
     name: "OxyGeneo Glow Facial",
     price: "135,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/32705765/pexels-photo-32705765.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/37033485/pexels-photo-37033485.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Aktiviert die natürliche Sauerstoffzufuhr der Haut von innen für sofortige Frische und Leuchtkraft."
   },
   {
@@ -198,7 +198,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Gesichtsstraffung",
     price: "135,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/25642674/pexels-photo-25642674.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/7581081/pexels-photo-7581081.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Fokussierte Lifting-Technik zur Straffung erschlaffter Konturen und Vitalisierung des Gewebes."
   },
   {
@@ -206,7 +206,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Red Carpet Behandlung",
     price: "140,00 €",
     category: "facial-body",
-    image: "https://images.pexels.com/photos/4586723/pexels-photo-4586723.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/37229294/pexels-photo-37229294.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Der ultimative Sofort-Effekt vor Events: Maximale Ausstrahlung und sichtbare Faltenglättung."
   },
   {
@@ -250,7 +250,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Hydradermabrasion",
     price: "145,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/29648627/pexels-photo-29648627.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/7789655/pexels-photo-7789655.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Schonende Porenreinigung kombiniert mit intensiver Wirkstoff-Einschleusung auf Wasserbasis."
   },
   {
@@ -258,7 +258,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML Aquafacial & Tiefenreinigung",
     price: "150,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/18209809/pexels-photo-18209809.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/5042622/pexels-photo-5042622.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Vortex-Technologie spült Talg und Ablagerungen schmerzfrei aus den Poren."
   },
   {
@@ -266,7 +266,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML Aquafacial & Fruchtsäurepeeling",
     price: "190,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/14438367/pexels-photo-14438367.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/10192208/pexels-photo-10192208.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Das Aquafacial-Vakuum ergänzt um Fruchtsäure – für besonders porentiefe Klarheit."
   },
   {
@@ -274,7 +274,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML Aquafacial & Microneedling",
     price: "245,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/30809949/pexels-photo-30809949.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/36497922/pexels-photo-36497922.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Power-Duo: Porentiefe Reinigung trifft auf gezielte Kollagenanregung per Mikronadeln."
   },
   {
@@ -282,7 +282,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML Microneedling Gesicht",
     price: "145,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/29648626/pexels-photo-29648626.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/14438367/pexels-photo-14438367.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Ultrafeine Nadelimpulse aktivieren die körpereigene Kollagen- und Elastinbildung spürbar."
   },
   {
@@ -290,7 +290,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML Microneedling Gesicht & Hals",
     price: "190,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/7789640/pexels-photo-7789640.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/39589562/pexels-photo-39589562.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Kollagenstimulation für ein ebenmäßiges Hautbild im Gesicht und am sensiblen Halsbereich."
   },
   {
@@ -298,7 +298,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML Microneedling Gesicht, Hals & Dekolleté",
     price: "240,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/3736280/pexels-photo-3736280.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/8624596/pexels-photo-8624596.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Das Rundum-Straffungspaket für Gesicht, Hals und ein jugendliches Dekolleté."
   },
   {
@@ -306,7 +306,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Radiofrequenz meets Microneedling",
     price: "195,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/19242408/pexels-photo-19242408.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/4586750/pexels-photo-4586750.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Wärmeenergie trifft Needling – strafft tiefe Bindegewebsschichten nachhaltig."
   },
   {
@@ -314,7 +314,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Radiofrequenz meets Hydrafacial",
     price: "200,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/10600169/pexels-photo-10600169.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/36930299/pexels-photo-36930299.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Thermische Festigung kombiniert mit maximaler Durchfeuchtung für sichtbaren Lifting-Effekt."
   },
   {
@@ -330,7 +330,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML BB Glow Augenringe",
     price: "75,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/5069430/pexels-photo-5069430.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/7290707/pexels-photo-7290707.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Hellt dunkle Schatten sanft auf und schenkt der Augenpartie ein waches Strahlen."
   },
   {
@@ -338,7 +338,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Mais Lumière BB Glow Gesicht",
     price: "150,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/6476077/pexels-photo-6476077.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/7290736/pexels-photo-7290736.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Natürliche Farbpigmente sorgen für einen dauerhaft ebenmäßigen No-Makeup-Look."
   },
   {
@@ -346,7 +346,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML BB Glow Gesicht & Hals",
     price: "190,00 €",
     category: "apparative",
-    image: "https://images.pexels.com/photos/9442294/pexels-photo-9442294.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/37033381/pexels-photo-37033381.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Nahtloser, seidiger Glow vom Gesicht bis zum Hals – ohne Make-up-Ränder."
   },
   {
@@ -454,7 +454,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Maxx Volume Refill nach 4 Wochen",
     price: "95,00 €",
     category: "lashes",
-    image: "https://images.pexels.com/photos/7216305/pexels-photo-7216305.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/38194460/pexels-photo-38194460.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Vollständige Wiederherstellung des tiefschwarzen Smokey-Lash-Effekts nach 4 Wochen."
   },
 
@@ -474,7 +474,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Augenbrauen färben",
     price: "20,00 €",
     category: "brows-lifting",
-    image: "https://images.pexels.com/photos/33580445/pexels-photo-33580445.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/5178001/pexels-photo-5178001.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Farbnuancierung passend zum Typ für optisch dichtere, harmonische Brauen."
   },
   {
@@ -498,7 +498,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML Koreanisches Brow Lifting inkl. Färben",
     price: "80,00 €",
     category: "brows-lifting",
-    image: "https://images.pexels.com/photos/38194463/pexels-photo-38194463.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/33607399/pexels-photo-33607399.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Laminierung bringt widerspenstige Brauenhaare dauerhaft in volle, buschige Form."
   },
   {
@@ -506,7 +506,7 @@ export const TREATMENTS: Treatment[] = [
     name: "ML Koreanisches Lash Lifting inkl. Färben",
     price: "80,00 €",
     category: "brows-lifting",
-    image: "https://images.pexels.com/photos/7446923/pexels-photo-7446923.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/8092594/pexels-photo-8092594.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Sanfte Dauerwelle direkt am Wimpernansatz – maximaler Schwung ganz ohne Wimpernzange."
   },
   {
@@ -514,7 +514,7 @@ export const TREATMENTS: Treatment[] = [
     name: "Luxus Koreanisches Brow & Lash Lifting",
     price: "140,00 €",
     category: "brows-lifting",
-    image: "https://images.pexels.com/photos/29588096/pexels-photo-29588096.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/15046690/pexels-photo-15046690.jpeg?auto=compress&cs=tinysrgb&w=800",
     description: "Das Rundum-Lifting für Wimpern und Brauen inkl. Tiefenpflege mit Keratin."
   }
 ];

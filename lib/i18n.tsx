@@ -86,9 +86,9 @@ const UI_TRANSLATIONS: Record<string, Record<Exclude<Language, "de">, string>> =
   },
   "Sitzungs-Cookies": { en: "session cookies", ar: "ملفات تعريف ارتباط الجلسة" },
   "permanente Cookies": { en: "persistent cookies", ar: "ملفات تعريف الارتباط الدائمة" },
-  "Willkommen bei Mais Lumière Esthetic – Ihrem Kosmetikstudio für Gesichtspflege, OxyGeneo und Wimpern-Design. Entspannen Sie sich in ruhiger Atmosphäre und lassen Sie Ihre Haut neu strahlen.": {
-    en: "Welcome to Mais Lumière Esthetic, your beauty studio for skincare, OxyGeneo and lash design. Relax in a peaceful setting and let your skin shine.",
-    ar: "مرحباً بكِ في Mais Lumière Esthetic، مركزك للعناية بالوجه وOxyGeneo وتصميم الرموش. استرخي في أجواء هادئة ودعي بشرتك تتألق.",
+  "Mais Lumière Esthetic ist dein luxuriöses Kosmetikstudio in Graz für exklusive Gesichtsbehandlungen, moderne Hautpflege und professionelle Beauty-Treatments. Der Fokus liegt auf sichtbaren Ergebnissen, strahlender Haut und einem exklusiven Wohlfühlerlebnis. Ob frischer Glow, Anti-Aging, tiefenreine Haut oder perfektes Styling - hier stehen Qualität, Eleganz und persönliche Betreuung an erster Stelle. Sichere dir jetzt deinen Termin und erlebe luxuriöse Beauty-Behandlungen im Herzen von Graz.": {
+    en: "Mais Lumière Esthetic is your luxury beauty studio in Graz for exclusive facials, modern skincare and professional beauty treatments. Our focus is on visible results, radiant skin and an exclusive feel-good experience. Whether you want a fresh glow, anti-aging care, deeply cleansed skin or perfect styling, quality, elegance and personal attention come first. Book your appointment now and enjoy luxury beauty treatments in the heart of Graz.",
+    ar: "Mais Lumière Esthetic هو مركز التجميل الفاخر الخاص بكِ في غراتس، ويقدم علاجات حصرية للوجه وعناية حديثة بالبشرة وخدمات تجميل احترافية. نركز على النتائج الواضحة والبشرة المشرقة وتجربة استرخاء مميزة. سواء كنتِ ترغبين في إشراقة جديدة أو عناية لمكافحة علامات التقدم في السن أو تنظيف عميق للبشرة أو إطلالة مثالية، فإن الجودة والأناقة والاهتمام الشخصي تأتي أولاً. احجزي موعدك الآن واستمتعي بعلاجات تجميل فاخرة في قلب غراتس.",
   },
   "Reservieren Sie jetzt Ihre Wunschbehandlung im": {
     en: "Book your preferred treatment at",

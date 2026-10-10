@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import BookingButton from "./BookingButton";
+import SocialIcon from "@/components/SocialIcon";
 import { HOURS, SITE } from "@/lib/data";
 import { useLanguage } from "@/lib/i18n";
 
@@ -35,9 +36,9 @@ export default function Footer() {
 
       <footer className="border-t border-white/10 bg-ink-darker text-ink-soft">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
-        <div className="grid gap-10 md:grid-cols-5">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-5">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="min-w-0 xl:col-span-2">
             <p className="font-serif text-xl text-white">
               Mais Lumière{" "}
               <span className="text-sm uppercase tracking-[0.25em] text-gold-light">
@@ -50,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Kontakt */}
-          <div>
+          <div className="min-w-0">
             <h3 className="mb-3 text-xs uppercase tracking-[0.3em] text-gold-light/80">
               {t("Kontakt")}
             </h3>
@@ -78,7 +79,7 @@ export default function Footer() {
           </div>
 
           {/* Social Media */}
-          <div>
+          <div className="min-w-0">
             <h3 className="mb-3 text-xs uppercase tracking-[0.3em] text-gold-light/80">
               {t("Social Media")}
             </h3>
@@ -89,10 +90,11 @@ export default function Footer() {
                     href={channel.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors hover:text-gold-light"
+                    className="inline-flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 transition-colors hover:text-gold-light"
                   >
+                    <SocialIcon name={channel.name} />
                     {channel.name}
-                    <span className="ml-2 text-ink-soft/70">{channel.handle}</span>
+                    <span className="min-w-0 break-all text-ink-soft/70">{channel.handle}</span>
                   </a>
                 </li>
               ))}
@@ -100,7 +102,7 @@ export default function Footer() {
           </div>
 
           {/* Öffnungszeiten */}
-          <div>
+          <div className="min-w-0">
             <h3 className="mb-3 text-xs uppercase tracking-[0.3em] text-gold-light/80">
               {t("Öffnungszeiten")}
             </h3>

@@ -71,7 +71,7 @@ export default function Hero() {
           }}
           className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg"
         >
-          {t("Willkommen bei Mais Lumière Esthetic – Ihrem Kosmetikstudio für Gesichtspflege, OxyGeneo und Wimpern-Design. Entspannen Sie sich in ruhiger Atmosphäre und lassen Sie Ihre Haut neu strahlen.")}
+          {t("Mais Lumière Esthetic ist dein luxuriöses Kosmetikstudio in Graz für exklusive Gesichtsbehandlungen, moderne Hautpflege und professionelle Beauty-Treatments. Der Fokus liegt auf sichtbaren Ergebnissen, strahlender Haut und einem exklusiven Wohlfühlerlebnis. Ob frischer Glow, Anti-Aging, tiefenreine Haut oder perfektes Styling - hier stehen Qualität, Eleganz und persönliche Betreuung an erster Stelle. Sichere dir jetzt deinen Termin und erlebe luxuriöse Beauty-Behandlungen im Herzen von Graz.")}
         </motion.p>
 
         <motion.div

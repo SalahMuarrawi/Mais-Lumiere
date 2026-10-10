@@ -1,6 +1,7 @@
 "use client";
 
 import { HOURS, MAP_EMBED, SITE } from "@/lib/data";
+import SocialIcon from "@/components/SocialIcon";
 import { useLanguage } from "@/lib/i18n";
 
 export default function Contact() {
@@ -72,8 +73,9 @@ export default function Contact() {
                       href={channel.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-ink-soft transition-colors hover:text-gold-light"
+                      className="inline-flex items-center gap-2 text-ink-soft transition-colors hover:text-gold-light"
                     >
+                      <SocialIcon name={channel.name} />
                       {channel.name}
                     </a>
                   </li>
