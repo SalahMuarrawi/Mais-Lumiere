@@ -522,19 +522,19 @@ export const TREATMENTS: Treatment[] = [
 export const GALLERY = [
   {
     alt: "Saubere, strahlende Haut nach einer Gesichtsbehandlung",
-    src: "/images/WhatsApp Image 2026-04-12 at 23.51.26.jpeg",
+    src: "/images/IMG_0927.HEIC",
   },
   {
     alt: "Pflegeprodukte und Seren in einer ruhigen Komposition",
-    src: "/images/WhatsApp Image 2026-04-13 at 00.07.53.jpeg",
+    src: "/images/IMG_0924.HEIC",
   },
   {
     alt: "Beruhigende Massagebehandlung mit cremiger Textur",
-    src: "/images/WhatsApp Image 2026-04-15 at 17.59.06.jpeg",
+    src: "/images/IMG_1718.HEIC",
   },
   {
     alt: "Frau mit glatter, gesunder Haut im Studio-Licht",
-    src: "/images/WhatsApp Image 2026-04-15 at 18.09.17.jpeg",
+    src: "/images/IMG_0983.HEIC",
   },
   {
     alt: "Aromatherapie und Entspannung im Kosmetikstudio",
@@ -542,7 +542,7 @@ export const GALLERY = [
   },
   {
     alt: "Detail einer Wimpernverlängerung",
-    src: "/images/Bildschirmfoto 2026-04-25 um 23.57.06.png",
+    src: "/images/IMG_0727.jpg",
   },
 ];
 
