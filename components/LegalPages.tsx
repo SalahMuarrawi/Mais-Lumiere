@@ -48,7 +48,7 @@ export function PrivacyContent() {
   return (
     <div className="bg-linen">
       <main className="mx-auto max-w-3xl px-5 pb-24 pt-32 sm:px-8 sm:pt-40">
-        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-dark">{t("Rechtliches")}</p>
+        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold">{t("Rechtliches")}</p>
         <h1 className="font-serif text-4xl text-ink">{t("Datenschutzerklärung")}</h1>
         <div className="mt-10 space-y-10">
           {PRIVACY_SECTIONS.map((section) => (
@@ -78,7 +78,7 @@ export function ImprintContent() {
   return (
     <div className="bg-linen">
       <main className="mx-auto max-w-3xl px-5 pb-24 pt-32 sm:px-8 sm:pt-40">
-        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-dark">{t("Rechtliches")}</p>
+        <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold">{t("Rechtliches")}</p>
         <h1 className="font-serif text-4xl text-ink">{t("Impressum")}</h1>
         <div className="prose-legal mt-10 space-y-8 text-sm leading-relaxed text-ink">
           <div>

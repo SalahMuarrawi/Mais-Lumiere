@@ -45,25 +45,25 @@ export default function BehandlungenPage() {
   }, [activeCategory, language, search]);
 
   return (
-    <main className="min-h-screen bg-[#0F0E0E] text-neutral-200 antialiased">
+    <main className="min-h-screen bg-cream text-ink antialiased">
       <div className="mx-auto max-w-6xl px-5 pb-16 pt-28 sm:px-8 sm:pt-32 lg:pb-24">
         <header className="mb-10 sm:mb-14">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">{SITE.name} · {SITE.city}</p>
-          <h1 className="mt-4 font-serif text-4xl font-bold text-white sm:text-5xl">{translate("Unsere Behandlungen")}</h1>
-          <p className="mt-5 max-w-2xl leading-relaxed text-neutral-200/70">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-gold">{SITE.name} · {SITE.city}</p>
+          <h1 className="mt-4 font-serif text-4xl font-bold text-ink sm:text-5xl">{translate("Unsere Behandlungen")}</h1>
+          <p className="mt-5 max-w-2xl leading-relaxed text-ink-soft/80">
             {translate("Von der klassischen Gesichtsbehandlung bis zur apparativen Anwendung – entdecken Sie unser Leistungsspektrum und vereinbaren Sie Ihren Wunschtermin.")}
           </p>
         </header>
 
         <div className="relative mb-8 max-w-md">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path strokeLinecap="round" d="m20 20-3.5-3.5" /></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-mist" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path strokeLinecap="round" d="m20 20-3.5-3.5" /></svg>
           <input
             type="search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder={translate("Behandlung suchen…")}
             aria-label={translate("Behandlungen durchsuchen")}
-            className="w-full rounded-full border border-neutral-800 bg-neutral-900/60 py-3 pl-11 pr-4 text-sm text-white outline-none transition-colors placeholder:text-neutral-500 focus:border-[#D4AF37]"
+            className="w-full rounded-full border border-white/10 bg-sand py-3 pl-11 pr-4 text-sm text-ink outline-none transition-colors placeholder:text-mist focus:border-gold"
           />
         </div>
 
@@ -76,8 +76,8 @@ export default function BehandlungenPage() {
               aria-pressed={activeCategory === tab.id}
               className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-colors ${
                 activeCategory === tab.id
-                  ? "border-[#D4AF37] bg-[#D4AF37]/10 text-[#D4AF37]"
-                  : "border-neutral-800 bg-neutral-900/60 text-neutral-300 hover:border-[#D4AF37]/50 hover:text-white"
+                  ? "border-gold bg-gold/10 text-gold"
+                  : "border-white/10 bg-sand text-ink-soft hover:border-gold/50 hover:text-ink"
               }`}
             >
               {tab.label === "Alle" ? translate("Alle") : translate(tab.label)}
@@ -85,7 +85,7 @@ export default function BehandlungenPage() {
           ))}
         </div>
 
-        <p className="mb-6 text-xs uppercase tracking-widest text-neutral-500">
+        <p className="mb-6 text-xs uppercase tracking-widest text-mist">
           {filteredTreatments.length}{" "}
           {language === "de"
             ? filteredTreatments.length === 1 ? "Behandlung" : "Behandlungen"
@@ -102,22 +102,22 @@ export default function BehandlungenPage() {
                 onClick={() => {
                   if (t.description) toggleTreatment(t.id);
                 }}
-                className="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/60 transition-colors hover:border-[#D4AF37]/50"
+                className="group flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-white/10 bg-sand transition-colors hover:border-gold/50"
               >
-                <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-800/60">
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-linen">
                   <img
                     src={t.image}
                     alt={localized.name}
                     loading="lazy"
-                    className="h-full w-full object-cover opacity-70 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-90"
+                    className="h-full w-full object-cover opacity-75 transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
                   />
-                  <span className="absolute left-3 top-3 rounded-full bg-neutral-950/80 px-3 py-1 text-[10px] uppercase tracking-widest text-[#D4AF37]">
+                  <span className="absolute left-3 top-3 rounded-full bg-cream/90 px-3 py-1 text-[10px] uppercase tracking-widest text-gold">
                     {translate(TREATMENT_CATEGORIES[t.category])}
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col gap-2 p-5">
-                  <h2 className="font-serif text-lg font-semibold leading-snug text-white">{localized.name}</h2>
-                  <p className="text-sm font-medium text-[#D4AF37]">{t.price}</p>
+                  <h2 className="font-serif text-lg font-semibold leading-snug text-ink">{localized.name}</h2>
+                  <p className="text-sm font-medium text-gold">{t.price}</p>
                   {t.description && (
                     <>
                       <button
@@ -128,7 +128,7 @@ export default function BehandlungenPage() {
                           e.stopPropagation();
                           toggleTreatment(t.id);
                         }}
-                        className="mt-3 inline-flex cursor-pointer items-center gap-1 self-start text-xs tracking-wider text-amber-400 transition hover:text-amber-300"
+                        className="mt-3 inline-flex cursor-pointer items-center gap-1 self-start text-xs tracking-wider text-gold-light transition hover:text-gold"
                       >
                         {translate(expandedId === t.id ? "Weniger Details ↑" : "Details & Info ↓")}
                       </button>
@@ -141,7 +141,7 @@ export default function BehandlungenPage() {
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.25, ease: "easeInOut" }}
                           onClick={(e) => e.stopPropagation()}
-                          className="mt-3 overflow-hidden border-t border-neutral-800 pt-3 text-xs leading-relaxed text-neutral-300"
+                          className="mt-3 overflow-hidden border-t border-white/10 pt-3 text-xs leading-relaxed text-ink-soft"
                         >
                           <p>{localized.description}</p>
                         </motion.div>
@@ -154,7 +154,7 @@ export default function BehandlungenPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-[#D4AF37]/60 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-[#D4AF37] transition-colors hover:bg-[#D4AF37] hover:text-neutral-950"
+                    className="mt-auto inline-flex items-center justify-center gap-2 rounded-full border border-gold/60 px-5 py-2.5 text-xs font-semibold uppercase tracking-wide text-gold transition-colors hover:bg-gold hover:text-cream"
                   >
                     Termin buchen
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-3.5 w-3.5" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
@@ -165,9 +165,9 @@ export default function BehandlungenPage() {
             })}
           </div>
         ) : (
-          <div className="rounded-2xl border border-dashed border-neutral-800 bg-neutral-900/40 p-12 text-center">
-            <p className="text-lg font-medium text-white">{translate("Keine Behandlung gefunden")}</p>
-            <p className="mt-2 text-sm text-neutral-400">{translate("Passen Sie Ihre Suche an oder wählen Sie eine andere Kategorie.")}</p>
+          <div className="rounded-2xl border border-dashed border-white/10 bg-sand/70 p-12 text-center">
+            <p className="text-lg font-medium text-ink">{translate("Keine Behandlung gefunden")}</p>
+            <p className="mt-2 text-sm text-ink-soft">{translate("Passen Sie Ihre Suche an oder wählen Sie eine andere Kategorie.")}</p>
           </div>
         )}
       </div>

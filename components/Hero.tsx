@@ -27,13 +27,20 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section id="top" className="relative isolate overflow-hidden bg-[#0f0e0e] pb-20 pt-32 sm:pt-40">
-      <img
-        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=2000&q=80&auto=format&fit=crop"
-        alt={t("Strahlende, gepflegte Haut")}
+    <section id="top" className="relative isolate overflow-hidden bg-cream pb-20 pt-32 sm:pt-40">
+      <video
+        aria-hidden="true"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/images/hero-facial-poster.jpg"
         className="absolute inset-0 -z-10 h-full w-full object-cover opacity-60"
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0f0e0e]/85 via-[#0f0e0e]/40 to-[#141211]" />
+      >
+        <source src="/videos/hero-facial.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-cream/85 via-cream/40 to-linen" />
 
       <motion.div
         initial="hidden"

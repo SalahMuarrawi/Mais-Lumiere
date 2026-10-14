@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { HOURS, MAP_EMBED, SITE } from "@/lib/data";
 import SocialIcon from "@/components/SocialIcon";
 import { useLanguage } from "@/lib/i18n";
@@ -8,9 +9,15 @@ export default function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section id="kontakt" className="bg-[#0f0e0e] py-20 text-white sm:py-28">
+    <section id="kontakt" className="bg-cream py-20 text-white sm:py-28">
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="max-w-2xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-2xl"
+        >
           <p className="mb-3 text-xs uppercase tracking-[0.35em] text-gold-light">
             {t("Kontakt & Anfahrt")}
           </p>
@@ -20,10 +27,16 @@ export default function Contact() {
           <p className="mt-4 text-ink-soft">
             {t("Mitten in Graz – perfekt mit öffentlichen Verkehrsmitteln erreichbar.")}
           </p>
-        </div>
+        </motion.div>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr]">
-          <div className="space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            className="space-y-8"
+          >
             {/* Adresse */}
             <div>
               <h3 className="mb-2 text-xs uppercase tracking-[0.3em] text-gold-light/80">
@@ -82,10 +95,16 @@ export default function Contact() {
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
 
           {/* Karte */}
-          <div className="overflow-hidden rounded-2xl border border-white/10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.65, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden rounded-2xl border border-white/10"
+          >
             <iframe
               src={MAP_EMBED}
               title={`${t("Anfahrtskarte:")} ${SITE.address.street}, ${SITE.address.zip} ${SITE.address.city}`}
@@ -93,7 +112,7 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
               className="h-72 w-full border-0 sm:h-full sm:min-h-[420px]"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

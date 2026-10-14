@@ -4,10 +4,10 @@
   --color-cream: #0f0e0e;
   --color-sand: #1a1817;
   --color-linen: #141211;
-  --color-gold: #b08d57;
-  --color-gold-dark: #d4af37;
+  --color-gold: #d4af37;
+  --color-gold-dark: #b08d57;
   --color-ink: #e5e5e5;
-  --color-ink-darker: #1f1a15;
+  --color-ink-darker: #1a1817;
   --color-ink-soft: #d4c9ba;
   --color-mist: #a19a92;
   --color-gold-light: #d8bd93;
@@ -27,6 +27,19 @@ body {
 }
 
 ::selection {
-  background: #b08d57;
+  background: var(--color-gold);
   color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

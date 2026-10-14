@@ -13,11 +13,11 @@ type BookingButtonProps = {
 
 const styles: Record<string, string> = {
   solid:
-    "bg-gold text-white hover:bg-gold-dark shadow-[0_10px_30px_-10px_rgba(176,141,87,0.7)]",
+    "bg-gold text-cream hover:bg-gold-dark shadow-[0_10px_30px_-10px_rgba(212,175,55,0.45)]",
   light:
-    "bg-[#e5e5e5] text-[#0f0e0e] hover:bg-white shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)]",
+    "bg-ink text-cream hover:bg-white shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)]",
   ghost:
-    "border border-white/60 text-white hover:bg-white hover:text-[#0f0e0e]",
+    "border border-white/60 text-white hover:bg-white hover:text-cream",
 };
 
 export default function BookingButton({
@@ -37,10 +37,10 @@ export default function BookingButton({
       href={SITE.bookingUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center gap-2 rounded-full font-medium uppercase transition-colors duration-300 ${sizeClasses} ${styles[variant]} ${className}`}
+      className={`group inline-flex items-center justify-center gap-2 rounded-full font-medium uppercase transition-[color,background-color,box-shadow,transform] duration-300 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-light ${sizeClasses} ${styles[variant]} ${className}`}
     >
       {t(label ?? "Termin buchen")}
-      <span aria-hidden className="text-base leading-none">
+      <span aria-hidden className="text-base leading-none transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none">
         →
       </span>
     </a>

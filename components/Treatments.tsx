@@ -23,7 +23,7 @@ function TreatmentCard({ treatment, index }: { treatment: Treatment; index: numb
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.55, delay: index * 0.09, ease: [0.22, 1, 0.36, 1] }}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#1f1b19] shadow-[0_8px_24px_-16px_rgba(0,0,0,0.6)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.75)]"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-sand shadow-[0_8px_24px_-16px_rgba(0,0,0,0.6)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-18px_rgba(0,0,0,0.75)]"
     >
       <div className="aspect-[4/3] w-full overflow-hidden bg-linen">
         <img
@@ -36,7 +36,7 @@ function TreatmentCard({ treatment, index }: { treatment: Treatment; index: numb
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-start justify-between gap-4">
           <h3 className="font-serif text-lg leading-snug text-ink">{localized.name}</h3>
-          <p className="mt-0.5 whitespace-nowrap font-medium tracking-wide text-gold-dark">
+          <p className="mt-0.5 whitespace-nowrap font-medium tracking-wide text-gold">
             {treatment.price}
           </p>
         </div>
@@ -46,7 +46,7 @@ function TreatmentCard({ treatment, index }: { treatment: Treatment; index: numb
         <Link
           href="/behandlungen"
           aria-label={`${t("Mehr erfahren")}: ${localized.name}`}
-          className="mt-auto inline-flex items-center gap-2 pt-4 text-xs uppercase tracking-[0.2em] text-gold-dark transition-colors hover:text-gold"
+          className="mt-auto inline-flex items-center gap-2 pt-4 text-xs uppercase tracking-[0.2em] text-gold transition-colors hover:text-gold-light"
         >
           {t("Mehr erfahren")} <span aria-hidden>→</span>
         </Link>
@@ -81,7 +81,7 @@ export default function Treatments() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl"
         >
-          <p className="mb-4 text-xs uppercase tracking-[0.35em] text-gold-dark">
+          <p className="mb-4 text-xs uppercase tracking-[0.35em] text-gold">
             {t("Ausgewählte Highlights")}
           </p>
           <h2 className="font-serif text-4xl leading-tight text-ink sm:text-5xl">
@@ -109,7 +109,7 @@ export default function Treatments() {
         >
           <Link
             href="/behandlungen"
-            className="group inline-flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-gold-dark transition-colors hover:text-gold"
+            className="group inline-flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-gold transition-colors hover:text-gold-light"
           >
             {t("Alle Behandlungen ansehen")} ({TREATMENTS.length})
             <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
